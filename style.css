@@ -2658,6 +2658,9 @@ a:focus {
     width: 100%;
     height: 300px;
   }
+  .intro-aside__play {
+    display: none;
+  }
   .intro-slider__text {
     padding: 60px 25px 0;
   }
