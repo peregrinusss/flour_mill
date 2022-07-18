@@ -2544,7 +2544,7 @@ a:focus {
     outline: none;
   }
 
-  .catalog__card {
+  .catalog__card:focus {
     outline: none;
   }
 
