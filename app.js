@@ -5,30 +5,33 @@ const introDotsFirst = document.querySelectorAll('.card-dot-first')
 const introDotsSecond = document.querySelectorAll('.card-dot-second')
 const introDotsThird = document.querySelectorAll('.card-dot-third')
 const introCards = document.querySelectorAll('.intro-slider__card')
-const introVideo = document.querySelector('.intro-aside__header')
+const introVideo = document.querySelector('.intro-aside__video')
 const introVideoPlay = document.querySelector('.intro-aside__play')
 const screenWidth = window.screen.width
 
 
 // Menu burger action
-menuBurgerOpen.addEventListener(('click'), () => {
+menuBurgerOpen.addEventListener('click', () => {
     menuMobile.classList.add('active')
     document.body.classList.add('noscroll')
 })
 
-menuBurgerClose.addEventListener(('click'), () => {
+menuBurgerClose.addEventListener('click', () => {
     menuMobile.classList.remove('active')
     document.body.classList.remove('noscroll')
 })
 
 
 // Intro Slider
+let slideIndex = 1
 
-introDotsFirst.forEach((introDotFirst) => {
-    introDotFirst.addEventListener('click', () => {
+introDotsFirst.forEach((introDotsFirst) => {
+    introDotsFirst.addEventListener('click', () => {
         introCards[0].classList.add('active')
         introCards[1].classList.remove('active')
         introCards[2].classList.remove('active')
+        slideIndex = 1
+        makeTimer()
     })
 })
 
@@ -37,16 +40,46 @@ introDotsSecond.forEach((introDotsSecond) => {
         introCards[0].classList.remove('active')
         introCards[1].classList.add('active')
         introCards[2].classList.remove('active')
+        slideIndex = 2
+        makeTimer()
     })
 })
 
-introDotsThird.forEach((introDotThird) => {
-    introDotThird.addEventListener('click', () => {
+introDotsThird.forEach((introDotsThird) => {
+    introDotsThird.addEventListener('click', () => {
         introCards[0].classList.remove('active')
         introCards[1].classList.remove('active')
         introCards[2].classList.add('active')
+        slideIndex = 3
+        makeTimer()
     })
 })
+
+showSlides(slideIndex);
+
+function showSlides(n) {
+  if (n > introCards.length) {
+    slideIndex = 1
+  }
+  if (n < 1) {
+    slideIndex = introCards.length
+  }
+  for (let introCard of introCards) {
+    introCard.classList.remove('active')
+  }
+  introCards[slideIndex - 1].classList.add('active')
+}
+
+var timer = 0;
+makeTimer()
+
+function makeTimer() {
+    clearInterval(timer)
+    timer = setInterval(() => {
+        slideIndex++
+        showSlides(slideIndex)
+    }, 5000)
+}
 
 
 // Play video button (intro)
@@ -60,15 +93,16 @@ const accordionItems = document.querySelectorAll(".footer-menu__title")
 
 if (screenWidth <= "768") {
     accordionItems.forEach((accordionItem) => {
-        accordionItem.addEventListener("click", event => {
-            accordionItem.classList.toggle("_active");
-            const accordionItemBody = accordionItem.nextElementSibling;
-            if (accordionItem.classList.contains("_active")) {
-                accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+        accordionItem.addEventListener("click", () => {
+            accordionItem.classList.toggle("active")
+            const accordionItemBody = accordionItem.nextElementSibling
+            if (accordionItem.classList.contains("active")) {
+                accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px"
             }
             else {
-                accordionItemBody.style.maxHeight = 0;
+                accordionItemBody.style.maxHeight = 0
             }
         })
     })
 }
+
