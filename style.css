@@ -181,6 +181,13 @@ a:focus {
   overflow: hidden;
 }
 
+.texture-bg {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* ----------------------------HEADER----------------------- */
 .header {
   width: 100%;
@@ -673,18 +680,16 @@ a:focus {
   margin-right: 30px;
   position: relative;
   overflow: hidden;
+  --mask:
+      linear-gradient(#000 0 0) center/calc(100% - 37.00px) calc(100% - 37.00px) no-repeat,
+      radial-gradient(farthest-side,#000 98%,#0000) 0 0/40px 40px round;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
 }
 .intro-slider__card {
   width: 100%;
   height: 100%;
   position: absolute;
-  --mask:
-    linear-gradient(#000 0 0) center/calc(100% - 37.00px) calc(100% - 37.00px) no-repeat,
-    radial-gradient(farthest-side,#000 98%,#0000) 0 0/40px 40px round;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
-  background: url(./image/introduce/background.png);
-  background-size: cover;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.6s ease;
@@ -695,12 +700,6 @@ a:focus {
   visibility: visible;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
-}
-.intro-slider__background {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
 }
 .intro-slider__image {
   position: absolute;
@@ -1142,6 +1141,7 @@ a:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
 .clean-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1162,6 +1162,7 @@ a:focus {
   width: 525px;
   height: 477px;
 }
+
 .clean-header-card {
   position: absolute;
   right: 0;
@@ -1178,6 +1179,7 @@ a:focus {
   max-width: 250px;
   z-index: 6;
 }
+
 .item {
   padding-top: 140px;
   max-width: 431px;
@@ -1434,6 +1436,7 @@ a:focus {
 .supply__btn {
   margin-top: 50px;
 }
+
 .map {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1557,6 +1560,7 @@ a:focus {
   line-height: 120%;
   margin-top: 32px;
 }
+
 .contact-number {
   margin-top: 40px;
 }

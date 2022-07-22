@@ -169,6 +169,12 @@ a:focus {
   overflow: hidden;
 }
 
+.texture-bg {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
 
 /* ----------------------------HEADER----------------------- */
 
@@ -191,6 +197,7 @@ a:focus {
     display: none;
   }
 }
+
 .hat {
   &__lang {
     background: none;
@@ -592,6 +599,7 @@ a:focus {
     justify-content: space-between;
 	}
 }
+
 .intro-title {
   display: flex;
   align-items: center;
@@ -603,7 +611,6 @@ a:focus {
     height: 252px;
     z-index: 1;
 	}
-
 	&__caption {
     font-weight: 800;
     font-size: 55px;
@@ -615,6 +622,7 @@ a:focus {
     }
 	}
 }
+
 .intro-slider {
   box-sizing: content-box;
   width: 1172px;
@@ -622,17 +630,15 @@ a:focus {
   margin-right: 30px;
   position: relative;
   overflow: hidden;
+  --mask: 
+      linear-gradient(#000 0 0) center/calc(100% - 37.00px) calc(100% - 37.00px) no-repeat,
+      radial-gradient(farthest-side,#000 98%,#0000) 0 0/40px 40px round;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
 	&__card {
     width: 100%;
     height: 100%;
     position: absolute;
-    --mask: 
-      linear-gradient(#000 0 0) center/calc(100% - 37.00px) calc(100% - 37.00px) no-repeat,
-      radial-gradient(farthest-side,#000 98%,#0000) 0 0/40px 40px round;
-    -webkit-mask: var(--mask);
-        mask: var(--mask);
-    background: url(./image/introduce/background.png);
-    background-size: cover;
     opacity: 0;
     visibility: hidden;
     transition: all 0.6s ease;
@@ -642,14 +648,6 @@ a:focus {
       transition: all 0.6s ease;
     }
 	}
-
-  &__background {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 0;
-  }
-
   &__image {
     position: absolute;
     &-hands {
@@ -659,9 +657,7 @@ a:focus {
       bottom: -40px;
       right: 0;
     }
-
   }
-
 	&__text {
     box-sizing: content-box;
     position: relative;
@@ -669,7 +665,6 @@ a:focus {
     max-width: 480px;
     padding: 70px;
 	}
-
 	&-dots {
     display: flex;
     &__border {
@@ -696,7 +691,6 @@ a:focus {
       }
     }
 	}
-
 	&__dot {
     background: #B69D86;
     width: 10px;
@@ -709,7 +703,6 @@ a:focus {
       }
     }
 	}
-
 	&__title {
     font-weight: 800;
     font-size: 36px;
@@ -717,7 +710,6 @@ a:focus {
     color: $dark-brown;
     margin-top: 30px
 	}
-
 	&__subtitle {
     display: block;
     color: $dark-brown;
@@ -726,24 +718,22 @@ a:focus {
     line-height: 120%;
     margin-top: 16px;
 	}
-
 	&__btn {
     margin-top: 30px;
 	}
 }
+
 .intro-aside {
   margin-top: -30px;
   display: flex;
   flex-direction: column;
   margin-right: 80px;
-
   &__header {
     position: relative;
     z-index: 1;
     width: 420px;
     height: 230px;
   }
-
   &__play {
     position: absolute;
     z-index: 2;
@@ -755,7 +745,6 @@ a:focus {
       display: none;
     }
   }
-
 	&__video {
     cursor: pointer;
     object-fit: cover;
@@ -774,11 +763,11 @@ a:focus {
       }
     }
 	}
-
 	&__info {
     width: 470px;
 	}
 }
+
 .aside-info {
   margin-top: 50px;
 	&__title {
@@ -787,7 +776,6 @@ a:focus {
     font-size: 26px;
     line-height: 110%;
 	}
-
 	&__discript {
     display: block;
     margin-top: 20px;
@@ -797,6 +785,7 @@ a:focus {
     color: #776157;
 	}
 }
+
 .aside-info-footer {
   margin-top: 20px;
   display: flex;
@@ -810,7 +799,6 @@ a:focus {
       height: 52px;
     }
 	}
-
 	&__director-name {
     margin-left: 14px;
     font-weight: 500;
@@ -843,7 +831,6 @@ a:focus {
     flex-wrap: wrap;
     justify-content: center;
   }
-
   &__card {
     margin: 0 17px;
     margin-top: 34px;
@@ -868,14 +855,12 @@ a:focus {
       outline: 0.5px solid #664B42;
     }
   }
-
   &__image {
     margin-top: -28px;
     width: 279px;
     height: 235px;
     margin-right: -13px;
   }
-
   &__title {
     margin-top: 22px;
     color: #1C1616;
@@ -953,9 +938,6 @@ a:focus {
   position: relative;
 }
 
-.line-static {
-}
-
 .card-beige {
   background: #F4EEE5;
   padding: 8px 8px;
@@ -989,18 +971,17 @@ a:focus {
   margin-top: 30px;
   &__line {
     position: absolute;
-    
   }
   &__line-top {
     top: 22px;
     left: 85px;
   }
-
   &__line-bottom {
     bottom: -120px;
     left: 85px;
   }
 }
+
 .buy-body {
   display: flex;
   align-items: center;
@@ -1009,14 +990,9 @@ a:focus {
   &__text {
     width: 298px;
   }
-
   &__image {
     max-width: 928px;
   }
-
-  &__title {
-  }
-
   &__btn {
     margin-top: 50px;
   }
@@ -1033,7 +1009,7 @@ a:focus {
     linear-gradient(#000 0 0) bottom/100% calc(100% - 26px) no-repeat,
     radial-gradient(circle farthest-side,#000 98%,#0000) top/48.10px 52px repeat-x;
   -webkit-mask: var(--mask);
-    mask: var(--mask);
+  mask: var(--mask);
   &__title {
     & span {
       white-space: nowrap;
@@ -1043,7 +1019,6 @@ a:focus {
     max-width: 250px;
   }
 }
-
 
 /* -----------------------------/AMOUNT------------------------ */
 
@@ -1058,7 +1033,6 @@ a:focus {
     z-index: 5;
     left: 85px;
   }
-
   &__line-top {
     top: 0;
   }
@@ -1069,15 +1043,11 @@ a:focus {
     left: 85px;
     margin-top: -120px;
   }
-
   &__items {
     margin-top: 40px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-  }
-
-  &__item {
   }
 }
 
@@ -1086,25 +1056,13 @@ a:focus {
   position: relative;
   justify-content: space-between;
   align-items: center;
-
   &__text {
     width: 320px;
   }
-
-  &__title {
-  }
-
-  &__subtitle {
-  }
-
   &__image {
     margin-right: 24.7%;
     width: 525px;
     height: 477px;
-  }
-
-  &__line {
-
   }
 }
 
@@ -1112,24 +1070,16 @@ a:focus {
   position: absolute;
   right: 0;
   top: 50px;
-
   &__line {
     position: absolute;
     bottom: -45px;
     left: -160px;
   }
-
   &__text {
     position: relative;
     padding: 25px;
     max-width: 250px;
     z-index: 6;
-  }
-
-  &__title {
-  }
-
-  &__subtitle {
   }
 }
 
@@ -1139,19 +1089,16 @@ a:focus {
   &:not(:last-child) {
     margin-right: 30px;
   }
-
   background-size: 120px;
   &-first {
     background: url(./image/path/clean/icon_1.svg) no-repeat top left;
   }
   &-second {
     background: url(./image/path/clean/icon_2.svg) no-repeat top left;
-
   }
   &-third {
     background: url(./image/path/clean/icon_3.svg) no-repeat top left;
   }
-
   &__title {
     font-weight: 700;
     font-size: 26px;
@@ -1159,7 +1106,6 @@ a:focus {
     color: $dark-brown;
     display: block;
   }
-
   &__subtitle {
     font-weight: 500;
     font-size: 18px;
@@ -1172,17 +1118,13 @@ a:focus {
   }
 }
 
-
 /* ------------------------------/CLEAN-------------------------- */
 
 
 /* ------------------------------PROD---------------------------- */
 
-
 .prod {
-
   position: relative;
-
   &__content {
     --mask: 
       linear-gradient(#000 0 0) top/100% calc(100% - 26px) no-repeat,
@@ -1190,19 +1132,16 @@ a:focus {
     -webkit-mask: var(--mask);
     mask: var(--mask);
   }
-
   &__body {
     display: flex;
     height: 100%;
     align-items: center;
     width: 100%;
-
   }
   &__subtitle {
     max-width: 350px;
   }
 }
-
 
 .prod-card {
   position: relative;
@@ -1211,7 +1150,6 @@ a:focus {
   &__text {
     padding: 25px;
   }
-
   &__line {
     position: absolute;
     top: -120px;
@@ -1219,8 +1157,6 @@ a:focus {
     z-index: 9;
   }
   &__content {
-
-
     box-sizing: content-box;
     position: absolute;
     right: 0;
@@ -1245,7 +1181,6 @@ a:focus {
     position: absolute;
     left: 85px;
     z-index: 5;
-
     &-top {
       top: 0;
     }
@@ -1253,7 +1188,6 @@ a:focus {
       bottom: 0;
     }
   }
-
 }
 
 .types-body {
@@ -1263,18 +1197,12 @@ a:focus {
   &__text {
     z-index: 3;
   }
-
-  &__title {
-  }
-
   &__subtitle {
     max-width: 400px;
   }
-
   &__btn {
     margin-top: 50px;
   }
-
   &__image {
     position: relative;
     width: 677px;
@@ -1284,7 +1212,6 @@ a:focus {
     display: flex;
     align-items: center;
   }
-
   &__image-percent {
     position: absolute;
     top: -25px;
@@ -1309,15 +1236,12 @@ a:focus {
   &__subtitle {
     max-width: 360px;
   }
-
   &__truck {
     margin-top: 88px;
   }
-
   &__variants {
     margin-top: 50px;
   }
-
   &__line {
     width: 2px;
     margin-top: 42px;
@@ -1402,19 +1326,11 @@ a:focus {
     align-items: center;
     text-align: center;
   }
-
-  &__title {
-  }
-
   &__subtitle {
     width: 340px;
   }
-
   &__btn {
     margin-top: 50px;
-  }
-
-  &__map {
   }
 }
 
@@ -1429,14 +1345,12 @@ a:focus {
   height: auto;
   padding-top: 50px;
   padding-bottom: 50px;
-
   &__image {
     z-index: 1;
     display: flex;
     position: relative;
     max-width: 1205px;
   }
-
   &__country {
     position: absolute;
     display: block;
@@ -1454,32 +1368,26 @@ a:focus {
       background: url(./image/path/supply/point.svg) no-repeat left bottom 60%;
     }
   }
-
   &__country-belarus {
     top: 43%;
     left: 4.2%;
   }
-
   &__country-iran {
     top: 68%;
     left: 19%;
   }
-
   &__country-ru {
     left: 44%;
     top: 30%;
   }
-
   &__country-knr {
     left: 45%;
     top: 67%;
   }
-
   &__country-vietnam {
     left: 51%;
     top: 89%;
   }
-
   &__frame {
     position: absolute;
     z-index: 0;
@@ -1505,39 +1413,33 @@ a:focus {
     position: absolute;
     z-index: 0;
   }
-
   &__bgimg-left {
     left: 0;
     bottom: 0;
     width: 354px;
     height: 325px;
   }
-
   &__bgimg-right {
     right: 0;
     bottom: 0;
     width: 442px;
     height: 366px;
   }
-
   &__container {
     z-index: 5;
     display: flex;
     justify-content: space-between;
   }
-
   &__text {
     color: #F4EEE5;
     max-width: 305px;
     margin-right: 50px;
   }
-
   &__title {
     font-weight: 800;
     font-size: 36px;
     line-height: 100%;
   }
-
   &__subtitle {
     display: block;
     font-weight: 500;
@@ -1545,12 +1447,8 @@ a:focus {
     line-height: 120%;
     margin-top: 32px;
   }
-
-  &__form {
-  }
-
-
 }
+
 .contact-number {
   margin-top: 40px;
   &__text {
@@ -1560,7 +1458,6 @@ a:focus {
     display: block;
     margin-bottom: 8px;
   }
-
   &__link {
     font-weight: 700;
     font-size: 26px;
@@ -1571,6 +1468,7 @@ a:focus {
     }
   }
 }
+
 .form {
   width: 867px;
   display: flex;
@@ -1692,7 +1590,6 @@ a:focus {
       }
     }
   }
-
   &__btn {
     padding-left: 50px;
     padding-right: 50px;
@@ -1739,7 +1636,6 @@ a:focus {
     height: 134px;
     grid-area: logo;
   }
-
   &__address {
     grid-area: address;
     max-width: 295px;
@@ -1763,6 +1659,7 @@ a:focus {
     }
   }
 }
+
 .footer-menu {
   grid-area: menu;
   margin-top: 50px;
@@ -1775,16 +1672,13 @@ a:focus {
     justify-content: space-between;
     max-width: 700px;
   }
-
   &__part {
     &:not(:last-child) {
       margin-right: 100px;
     }
   }
-
   &__submenu {
   }
-
   &__title {
     font-weight: 700;
     font-size: 26px;
@@ -1794,6 +1688,7 @@ a:focus {
     white-space: nowrap;
   }
 }
+
 .submenu {
   &__link {
     &:not(:last-child) {
@@ -1812,6 +1707,7 @@ a:focus {
     }
   }
 }
+
 .footer-details {
   color: $dark-brown;
   grid-area: details;
@@ -1824,13 +1720,13 @@ a:focus {
     line-height: 110%;
     display: block;
   }
-
   &__email {
     font-weight: 600;
     font-size: 22px;
     line-height: 120%;
   }
 }
+
 .footer-contact {
   grid-area: contact;
   color: $dark-brown;
@@ -1844,7 +1740,6 @@ a:focus {
     justify-content: space-between;
     height: 32px;
   }
-
   &__link {
     & svg {
       width: 32px;
@@ -1853,9 +1748,7 @@ a:focus {
         opacity: 0.8;
       }
     }
-
   }
-
   &__btn {
     border: none;
     padding-left: 0;
@@ -1889,7 +1782,6 @@ a:focus {
     line-height: 130%;
     color: #776157;
   }
-
   &__btn {
     border: none;
     padding-left: 0;
