@@ -83,21 +83,28 @@ function makeTimer() {
 
 
 // Play video button (intro)
+
 introVideo.addEventListener('click', () => {
-    introVideoPlay.classList.toggle('intro-aside__play-hidden')
+    if (introVideo.paused) {
+        introVideo.play()
+        introVideoPlay.classList.add('intro-aside__play-hidden')
+      } else {
+        introVideo.pause()
+        introVideoPlay.classList.remove('intro-aside__play-hidden')
+      }
 })
 
 
 // Accordion (footer)
-const accordionItems = document.querySelectorAll(".footer-menu__title")
+const accordionItems = document.querySelectorAll('.footer-menu__title')
 
-if (screenWidth <= "768") {
+if (screenWidth <= '768') {
     accordionItems.forEach((accordionItem) => {
-        accordionItem.addEventListener("click", () => {
-            accordionItem.classList.toggle("active")
+        accordionItem.addEventListener('click', () => {
+            accordionItem.classList.toggle('active')
             const accordionItemBody = accordionItem.nextElementSibling
-            if (accordionItem.classList.contains("active")) {
-                accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px"
+            if (accordionItem.classList.contains('active')) {
+                accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px'
             }
             else {
                 accordionItemBody.style.maxHeight = 0

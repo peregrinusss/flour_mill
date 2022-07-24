@@ -169,6 +169,34 @@ a:focus {
   overflow: hidden;
 }
 
+.texture-bg {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-basket {
+  position: relative;
+  &::after {
+    content: "0";
+    background: #FD9F32;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: 700;
+    font-size: 14px;
+    color: $dark-brown;
+    width: 20px;
+    height: 20px;
+    bottom: -5px;
+    right: -6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 /* ----------------------------HEADER----------------------- */
 
@@ -271,24 +299,6 @@ a:focus {
       & svg {
         width: 28px;
         height: 25px;
-      }
-    }
-    &-basket {
-      &::after {
-        content: "0";
-        background: #FD9F32;
-        border-radius: 50%;
-        position: absolute;
-        font-weight: 700;
-        font-size: 14px;
-        color: $dark-brown;
-        width: 20px;
-        height: 20px;
-        bottom: -2px;
-        right: -6px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
       }
     }
   }
@@ -500,6 +510,8 @@ a:focus {
       border: none;
       background: none;
       padding: 0;
+      width: 28px;
+      height: 25px;
       & svg {
         width: 28px;
         height: 25px;
@@ -629,8 +641,6 @@ a:focus {
       radial-gradient(farthest-side,#000 98%,#0000) 0 0/40px 40px round;
   -webkit-mask: var(--mask);
   mask: var(--mask);
-  background: url(./image/introduce/background.png) no-repeat center;
-  background-size: cover;
 	&__card {
     width: 100%;
     height: 100%;
@@ -729,6 +739,13 @@ a:focus {
     z-index: 1;
     width: 420px;
     height: 230px;
+    transition: 0.1s;
+    &:hover {
+      & .intro-aside__play {
+        opacity: 0.9;
+        transition: 0.1s;
+      }
+    }
   }
   &__play {
     position: absolute;
@@ -747,17 +764,6 @@ a:focus {
     width: 100%;
     height: 100%;
     border-radius: 4px;
-    &:first-child {
-      display: none;
-    }
-    &:hover {
-      opacity: 0.9;
-    }
-    &:checked {
-      & .intro-aside__play {
-        display: none;
-      }
-    }
 	}
 	&__info {
     width: 470px;
@@ -2447,9 +2453,6 @@ a:focus {
       &__header {
         width: 100%;
         height: 300px;
-      }
-      &__play {
-        display: none;
       }
     }
     &-slider {

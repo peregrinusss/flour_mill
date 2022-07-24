@@ -181,6 +181,41 @@ a:focus {
   overflow: hidden;
 }
 
+.texture-bg {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-basket {
+  position: relative;
+}
+.btn-basket::after {
+  content: "0";
+  background: #FD9F32;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-weight: 700;
+  font-size: 14px;
+  color: #664B42;
+  width: 20px;
+  height: 20px;
+  bottom: -5px;
+  right: -6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 /* ----------------------------HEADER----------------------- */
 .header {
   width: 100%;
@@ -302,28 +337,6 @@ a:focus {
 .hat__btn.mobile svg {
   width: 28px;
   height: 25px;
-}
-.hat__btn-basket::after {
-  content: "0";
-  background: #FD9F32;
-  border-radius: 50%;
-  position: absolute;
-  font-weight: 700;
-  font-size: 14px;
-  color: #664B42;
-  width: 20px;
-  height: 20px;
-  bottom: -2px;
-  right: -6px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .hat__burger {
   display: none;
@@ -546,6 +559,8 @@ a:focus {
   border: none;
   background: none;
   padding: 0;
+  width: 28px;
+  height: 25px;
 }
 .menu-mobile__btn svg {
   width: 28px;
@@ -678,8 +693,6 @@ a:focus {
       radial-gradient(farthest-side,#000 98%,#0000) 0 0/40px 40px round;
   -webkit-mask: var(--mask);
   mask: var(--mask);
-  background: url(./image/introduce/background.png) no-repeat center;
-  background-size: cover;
 }
 .intro-slider__card {
   width: 100%;
@@ -795,6 +808,13 @@ a:focus {
   z-index: 1;
   width: 420px;
   height: 230px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+.intro-aside__header:hover .intro-aside__play {
+  opacity: 0.9;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 .intro-aside__play {
   position: absolute;
@@ -815,15 +835,6 @@ a:focus {
   width: 100%;
   height: 100%;
   border-radius: 4px;
-}
-.intro-aside__video:first-child {
-  display: none;
-}
-.intro-aside__video:hover {
-  opacity: 0.9;
-}
-.intro-aside__video:checked .intro-aside__play {
-  display: none;
 }
 .intro-aside__info {
   width: 470px;
@@ -2684,9 +2695,6 @@ a:focus {
   .intro-aside__header {
     width: 100%;
     height: 300px;
-  }
-  .intro-aside__play {
-    display: none;
   }
   .intro-slider__text {
     padding: 60px 25px 0;
