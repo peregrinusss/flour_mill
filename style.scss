@@ -169,12 +169,6 @@ a:focus {
   overflow: hidden;
 }
 
-.texture-bg {
-  position: absolute;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-}
 
 /* ----------------------------HEADER----------------------- */
 
@@ -635,6 +629,8 @@ a:focus {
       radial-gradient(farthest-side,#000 98%,#0000) 0 0/40px 40px round;
   -webkit-mask: var(--mask);
   mask: var(--mask);
+  background: url(./image/introduce/background.png) no-repeat center;
+  background-size: cover;
 	&__card {
     width: 100%;
     height: 100%;
@@ -1677,8 +1673,6 @@ a:focus {
       margin-right: 100px;
     }
   }
-  &__submenu {
-  }
   &__title {
     font-weight: 700;
     font-size: 26px;
@@ -2190,9 +2184,6 @@ a:focus {
   }
   .variants {
     max-width: 483px;
-    &__image {
-
-    }
   }
   .map {
     background: url(./image/path/supply/frame_medium.svg) no-repeat center;
@@ -2342,9 +2333,6 @@ a:focus {
   .footer {
     &-menu {
       margin-left: -40px;
-      &__body {
-
-      }
     }
   }
 }
@@ -2527,8 +2515,6 @@ a:focus {
       height: 116px;
       margin-top: -10px;
       margin-right: -8px;
-    }
-    &__title {
     }
   }
   .path {
@@ -2910,11 +2896,6 @@ a:focus {
   .menu-mobile {
     padding-left: 15px;
     padding-right: 15px;
-  }
-  .intro-slider {
-    &__card {
-
-    }
   }
   .intro {
     &__container {

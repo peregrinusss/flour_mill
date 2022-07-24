@@ -181,13 +181,6 @@ a:focus {
   overflow: hidden;
 }
 
-.texture-bg {
-  position: absolute;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-}
-
 /* ----------------------------HEADER----------------------- */
 .header {
   width: 100%;
@@ -685,6 +678,8 @@ a:focus {
       radial-gradient(farthest-side,#000 98%,#0000) 0 0/40px 40px round;
   -webkit-mask: var(--mask);
   mask: var(--mask);
+  background: url(./image/introduce/background.png) no-repeat center;
+  background-size: cover;
 }
 .intro-slider__card {
   width: 100%;
@@ -2373,6 +2368,7 @@ a:focus {
   .variants {
     max-width: 483px;
   }
+
   .map {
     background: url(./image/path/supply/frame_medium.svg) no-repeat center;
   }
@@ -2753,6 +2749,7 @@ a:focus {
     margin-top: -10px;
     margin-right: -8px;
   }
+
   .path__title {
     font-size: 40px;
   }
