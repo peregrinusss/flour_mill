@@ -146,11 +146,11 @@ video::-webkit-media-controls-play-button {
   }
 }
 
-button:focus {
+button:focus-visible {
   outline: 0.5px solid #664B42;
 }
 
-a:focus {
+a:focus-visible {
   outline: 0.5px solid #664B42;
 }
 
@@ -166,9 +166,6 @@ a:focus {
     color: #664B42;
     background: url(./image/introduce/arrow_right_dark.svg) no-repeat right;
     background-size: 14px;
-  }
-  &:focus {
-    outline: 0.5px solid #664B42;
   }
 }
 
@@ -287,8 +284,6 @@ a:focus {
     visibility: hidden;
     transform: translateY(-10px);
     transition: 0.5s;
-  }
-  &__items {
   }
   &__item {
     font-weight: 500;
@@ -1127,7 +1122,7 @@ a:focus {
         background-size: 40px;
       }
     }
-    &:focus {
+    &:focus-visible {
       outline: 0.5px solid #664B42;
     }
   }
@@ -1739,7 +1734,7 @@ a:focus {
     font-size: 26px;
     line-height: 110%;
     color: #FD9F32;
-    &:focus {
+    &:focus-visible {
       outline: 1px solid #F2EDE6;
     }
   }
@@ -1770,7 +1765,6 @@ a:focus {
     display: flex;
     justify-content: space-between;
   }
-
   &__person {
     width: 392px;
     margin-right: 24px;
@@ -1787,7 +1781,6 @@ a:focus {
     display: block;
     width: 430px;
   }
-
   &__checkbox {
     margin-top: 30px;
     &.disabled {
@@ -1811,7 +1804,7 @@ a:focus {
         color: #FD9F32;
         transition: 0.1s;
       }
-      &:focus {
+      &:focus-visible {
         outline: 1px solid #F2EDE6;
       }
     }
@@ -1861,7 +1854,7 @@ a:focus {
         opacity: 0.8;
         cursor: not-allowed;
       }
-      &:focus+label::before {
+      &:focus-visible+label::before {
         outline: 1px solid #F2EDE6;
       }
     }
@@ -1871,7 +1864,7 @@ a:focus {
     padding-right: 50px;
     max-width: 200px;
     margin-top: 50px;
-    &:focus {
+    &:focus-visible {
       outline: 1px solid #F2EDE6;
     }
   }

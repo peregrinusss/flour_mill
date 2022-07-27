@@ -156,11 +156,11 @@ video::-webkit-media-controls-play-button {
           box-shadow: 13px 4px 30px rgba(203, 173, 149, 0.45);
 }
 
-button:focus {
+button:focus-visible {
   outline: 0.5px solid #664B42;
 }
 
-a:focus {
+a:focus-visible {
   outline: 0.5px solid #664B42;
 }
 
@@ -179,9 +179,6 @@ a:focus {
   color: #664B42;
   background: url(./image/introduce/arrow_right_dark.svg) no-repeat right;
   background-size: 14px;
-}
-.link-orange:focus {
-  outline: 0.5px solid #664B42;
 }
 
 .noscroll {
@@ -1293,7 +1290,7 @@ a:focus {
   padding-right: 60px;
   background-size: 40px;
 }
-.catalog__card:focus {
+.catalog__card:focus-visible {
   outline: 0.5px solid #664B42;
 }
 .catalog__image {
@@ -1931,7 +1928,7 @@ a:focus {
   line-height: 110%;
   color: #FD9F32;
 }
-.contact-number__link:focus {
+.contact-number__link:focus-visible {
   outline: 1px solid #F2EDE6;
 }
 
@@ -2028,7 +2025,7 @@ a:focus {
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
-.form__checkbox a:focus {
+.form__checkbox a:focus-visible {
   outline: 1px solid #F2EDE6;
 }
 .form__checkbox label {
@@ -2088,7 +2085,7 @@ a:focus {
   opacity: 0.8;
   cursor: not-allowed;
 }
-.form__checkbox-input:focus + label::before {
+.form__checkbox-input:focus-visible + label::before {
   outline: 1px solid #F2EDE6;
 }
 .form__btn {
@@ -2097,7 +2094,7 @@ a:focus {
   max-width: 200px;
   margin-top: 50px;
 }
-.form__btn:focus {
+.form__btn:focus-visible {
   outline: 1px solid #F2EDE6;
 }
 
