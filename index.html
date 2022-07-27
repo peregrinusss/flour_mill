@@ -63,10 +63,10 @@
                 <div class="hat__area">
                     <a href="tel:+78312289080" class="hat-phone">+7 (831) 228-90-80</a>
                     <div class="hat__btns">
-                        <button class="hat__btn">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9.31818" cy="9.31818" r="8.31818" stroke="#664B42" stroke-width="2"/>
-                                <path d="M14.5361 16.4004L20.4998 22.364" stroke="#664B42" stroke-width="2"/>
+                        <button class="hat__btn btn-search">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#664B42" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.31818" cy="9.31818" r="8.31818" stroke-width="2"/>
+                                <path d="M14.5361 16.4004L20.4998 22.364" stroke-width="2"/>
                             </svg>
                         </button>
                         <button class="hat__btn btn-basket">
@@ -187,10 +187,10 @@
                         </div>
                     </div>
                     <div class="menu-mobile__btns">
-                        <button class="menu-mobile__btn">
-                            <svg viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9.31818" cy="9.31818" r="8.31818" stroke="#A28276" stroke-width="2"/>
-                                <path d="M14.5361 16.4004L20.4998 22.364" stroke="#A28276" stroke-width="2"/>
+                        <button class="menu-mobile__btn menu-mobile__btn-search btn-search">
+                            <svg viewBox="0 0 22 24" fill="none" stroke="#A28276" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.31818" cy="9.31818" r="8.31818" stroke-width="2"/>
+                                <path d="M14.5361 16.4004L20.4998 22.364" stroke-width="2"/>
                             </svg>
                         </button>
                         <button class="menu-mobile__btn">
@@ -249,6 +249,33 @@
                     </ul>
                 </nav>
             </div>
+        </div>
+        <div class="hat__search">
+            <div class="search">
+                <div class="search__container">
+                    <div class="search__header">
+                        <button class="search__back">Назад</button>
+                        <div class="search__header-desktop">
+                            <img src="./image/header/logo.svg" alt="Логотип компании" class="search__logo">
+                            <form class="search__form">
+                                <button type="submit" class="search__btn">
+                                    <svg viewBox="0 0 22 24" fill="none" stroke="#FD9F32" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="9.31818" cy="9.31818" r="8.31818" stroke-width="2"/>
+                                        <path d="M14.5361 16.4004L20.4998 22.364" stroke-width="2"/>
+                                    </svg>
+                                </button>
+                                <input type="search" class="search__stroke" placeholder="Введите запрос">
+                            </form>
+                            <button class="search__close">
+                                <svg viewBox="0 0 23 23" fill="#B69D86" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.67172 0.671842C1.08194 0.261749 1.63824 0.0313721 2.21828 0.0313721C2.79833 0.0313721 3.35463 0.261749 3.76485 0.671842L11.4998 8.40684L19.2348 0.671842C19.6474 0.273371 20.2 0.0528839 20.7735 0.0578679C21.3471 0.0628519 21.8957 0.292909 22.3013 0.698489C22.7069 1.10407 22.937 1.65272 22.9419 2.22628C22.9469 2.79983 22.7264 3.3524 22.328 3.76497L14.593 11.5L22.328 19.235C22.7264 19.6475 22.9469 20.2001 22.9419 20.7737C22.937 21.3472 22.7069 21.8959 22.3013 22.3014C21.8957 22.707 21.3471 22.9371 20.7735 22.9421C20.2 22.9471 19.6474 22.7266 19.2348 22.3281L11.4998 14.5931L3.76485 22.3281C3.35228 22.7266 2.79971 22.9471 2.22616 22.9421C1.6526 22.9371 1.10395 22.707 0.698367 22.3014C0.292787 21.8959 0.0627299 21.3472 0.0577458 20.7737C0.0527618 20.2001 0.273249 19.6475 0.67172 19.235L8.40672 11.5L0.67172 3.76497C0.261627 3.35475 0.03125 2.79845 0.03125 2.2184C0.03125 1.63836 0.261627 1.08206 0.67172 0.671842Z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-overlay"></div>
         </div>
     </header>
     <main class="main">
@@ -330,7 +357,11 @@
                     </div>
                     <div class="intro-aside">
                         <div class="intro-aside__header">
-                            <img src="./image/introduce/play.svg" alt="" class="intro-aside__play">
+                            <div class="intro-aside__play">
+                                <svg width="18" height="22" viewBox="0 0 18 22" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 11L9.2855e-07 21.3923L1.83707e-06 0.607695L18 11Z"/>
+                                </svg>
+                            </div>
                             <video preload="metadata" poster="./image/introduce/video_preview.jpg" class="intro-aside__video">
                                 <source src="./image/path/amount/test_video.mp4" type="video/mp4">
                             </video>

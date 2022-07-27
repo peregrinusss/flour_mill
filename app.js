@@ -113,3 +113,37 @@ if (screenWidth <= '768') {
     })
 }
 
+
+// Header search
+const searchBtns = document.querySelectorAll('.btn-search')
+const searchBlock = document.querySelector('.search')
+const searchOverlay = document.querySelector('.hat__search')
+const searchOverlayTap = document.querySelector('.search-overlay')
+const searchClose = document.querySelector('.search__close')
+const searchBack = document.querySelector('.search__back')
+
+searchBtns.forEach((searchBtn) => {
+    searchBtn.addEventListener('click', () => {
+        searchBlock.classList.add('active')
+        searchOverlay.classList.add('active')
+        searchOverlayTap.classList.add('active')
+    })
+})
+
+searchClose.addEventListener('click', () => {
+    searchBlock.classList.remove('active')
+    searchOverlay.classList.remove('active')
+    searchOverlayTap.classList.remove('active')
+})
+
+searchBack.addEventListener('click', () => {
+    searchBlock.classList.remove('active')
+    searchOverlay.classList.remove('active')
+    searchOverlayTap.classList.remove('active')
+})
+
+searchOverlayTap.addEventListener('click', () => {
+    searchBlock.classList.remove('active')
+    searchOverlay.classList.remove('active')
+    searchOverlayTap.classList.remove('active')
+})

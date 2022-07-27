@@ -96,6 +96,13 @@ li {
   list-style: none;
 }
 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
 /* --------------------------/NULL------------------------- */
 
 body {
@@ -195,6 +202,16 @@ a:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.btn-search {
+  & svg {
+    transition: 0.1s;
+    &:hover {
+      stroke: #FD9F32;
+      transition: 0.1s;
+    }
   }
 }
 
@@ -403,6 +420,156 @@ a:focus {
     top: 7px;
     transform: scale(1);
   }
+  &__search {
+    position: fixed;
+    z-index: 13;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    visibility: hidden;
+    transition: 0.3s;
+    &.active {
+      background: rgba(163, 131, 119, 0.4);
+      visibility: visible;
+      transition: 0.3s;
+    }
+  }
+}
+
+.search {
+  z-index: 15;
+  background: #FFFFFF;
+  width: 100%;
+  transform: translateY(-100%);
+  transition: 0.5s;
+  &.active {
+    transform: translateY(0);
+    transition: 0.5s;
+  }
+  &__container {
+    max-width: 1534px;
+    padding: 0 25px;
+    margin: 0 auto;
+    height: 100%;
+  }
+  &-overlay {
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    &.active {
+      visibility: visible;
+    }
+  }
+  &__back {
+    border: 0;
+    background: none;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    color: #A28276;
+    position: relative;
+    padding-left: 24px;
+    display: none;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      width: 16px;
+      height: 16px;
+      background: url(./image/header/arrow_left.svg) no-repeat left;
+    }
+  }
+  &__header {
+    height: 130px;
+    width: 100%;
+    &-desktop {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__logo {
+    margin-right: 50px;
+  }
+  &__form {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    margin-right: 50px;
+  }
+  &__btn {
+    background: #F2EDE6;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    margin-right: 16px;
+    & svg {
+      width: 22px;
+      height: 24px;
+    }
+  }
+  &__stroke {
+    display: block;
+    background: #F2EDE6;
+    border: none;
+    border-radius: 8px;
+    height: 50px;
+    padding: 0 20px;
+    max-width: 1020px;
+    flex: 1 1 auto;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    color: $dark-brown;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &::-ms-clear {
+      width: 0;
+      height: 0;
+    }
+    &::placeholder {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 120%;
+      letter-spacing: -0.01em;
+      color: #B69D86;
+    }
+    &:focus {
+      box-shadow: 0px 0px 0px 2px #fd9f32;
+    }
+  }
+  &__close {
+    border: none;
+    background: none;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    justify-self: end;
+    & svg {
+      width: 23px;
+      height: 23px;
+    }
+  }
 }
 
 // Popup hovered (menu)
@@ -527,7 +694,7 @@ a:focus {
     top: 0;
     left: 0;
     width: 100%;
-    height: 110%;
+    height: 100%;
     background: #ffffff;
     z-index: 10;
     left: -100%;
@@ -588,10 +755,15 @@ a:focus {
       background: none;
       padding: 0;
       width: 28px;
-      height: 25px;
+      height: 28px;
+      cursor: pointer;
       & svg {
-        width: 28px;
-        height: 25px;
+        width: 100%;
+      }
+      &-search {
+        & svg {
+          width: 80%;
+        }
       }
       &:not(:last-child) {
         margin-right: 20px;
@@ -826,11 +998,15 @@ a:focus {
     z-index: 1;
     width: 420px;
     height: 230px;
-    transition: 0.1s;
+    transition: 0.2s;
     &:hover {
       & .intro-aside__play {
-        opacity: 0.9;
-        transition: 0.1s;
+        background: #ffffff;
+        box-shadow: 2px 2px 10px #2c2c2c;
+        & svg {
+          fill: #FD9F32;
+          transition: 0.2s;
+        }
       }
     }
   }
@@ -841,6 +1017,17 @@ a:focus {
     top: 50%;
     transform: translate(-50%,-50%);
     pointer-events: none;
+    background: #FD9F32;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.2s;
+    & svg {
+      margin-right: -6px;
+    }
     &-hidden {
       display: none;
     }
@@ -2090,6 +2277,14 @@ a:focus {
       font-size: 14px;
     }
   }
+  .search {
+    &__logo {
+      margin-right: 25px;
+    }
+    &__form {
+      margin-right: 35px;
+    }
+  }
   .intro {
     padding-bottom: 190px;
     &-title {
@@ -2523,6 +2718,37 @@ a:focus {
       padding-right: 30px;
       margin-right: 0;
       font-size: 18px;
+    }
+  }
+  .search {
+    height: 100%;
+    &__header {
+      padding-top: 30px;
+      &-desktop {
+        height: 50px;
+        margin-top: 30px;
+      }
+    }
+    &__logo {
+      display: none;
+    }
+    &__close {
+      display: none;
+    }
+    &__form {
+      margin-right: 0;
+      height: 50px;
+    }
+    &__btn {
+      order: 2;
+      margin-right: 0;
+    }
+    &__stroke {
+      order: 1;
+      margin-right: 16px;
+    }
+    &__back {
+      display: block;
     }
   }
   .intro {
@@ -2992,6 +3218,17 @@ a:focus {
   .menu-mobile {
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .search {
+    &__container {
+      padding: 0 15px;
+    }
+    &__stroke {
+      width: 100%;
+    }
+    &__btn {
+      flex: 1 0 auto;
+    }
   }
   .intro {
     &__container {
