@@ -220,8 +220,20 @@ a:focus {
   }
 }
 
-.hat {
-  &__lang {
+.lang {
+  &:hover {
+    & .lang__list {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      transition: 0.4s;
+    }
+    & .lang__btn::after {
+      transform: rotate(-180deg);
+      transition: 0.5s;
+    }
+  }
+  &__btn {
     background: none;
     cursor: pointer;
     padding: 2px;
@@ -229,8 +241,57 @@ a:focus {
     font-weight: 500;
     font-size: 16px;
     line-height: 130%;
-    background: url(./image/header/arrow_down.svg) no-repeat right;
     padding-right: 14px;
+    position: relative;
+    z-index: 12;
+    &::after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      margin: auto 0;
+      background: url(./image/header/arrow_down.svg) no-repeat right;
+      transition: 0.4s;
+      transform-origin: 7px 6px;
+    }
+  }
+  &__list {
+    position: absolute;
+    z-index: 10;
+    background: #FFFFFF;
+    border-radius: 4px;
+    padding: 10px 6px;
+    margin-left: -4px;
+    box-shadow: 0px 0px 3px rgb(203 173 149 / 45%);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: 0.5s;
+  }
+  &__items {
+  }
+  &__item {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: $dark-brown;
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+    transition: 0.2s;
+    &:hover {
+      color: #FD9F32;
+      transition: 0.2s;
+    }
+  }
+}
+
+.hat {
+  &__lang {
     position: absolute;
     left: 0;
   }
@@ -251,8 +312,10 @@ a:focus {
     & svg {
       width: 24px;
       height: 24px;
+      transition: 0.1s;
       &:hover {
-        opacity: 0.8;
+        fill: #FD9F32;
+        transition: 0.1s;
       }
     }
     &:not(:last-child) {
@@ -342,8 +405,8 @@ a:focus {
   }
 }
 
-// Popup hovered (about link)
-.about {
+// Popup hovered (menu)
+.more {
   &-popup-card {
     width: 200px;
     display: flex;
@@ -355,18 +418,13 @@ a:focus {
     transition: 0.1s;
     &__title {
       color: $dark-brown;
-      margin-top: 10px;
       font-weight: 500;
       font-size: 18px;
       line-height: 120%;
       letter-spacing: -0.01em;
     }
-    &-icon {
-      width: 22px;
-      height: 22px;
-    }
     &:hover {
-      & .about-popup-card__title {
+      & .more-popup-card__title {
         color: #FD9F32;
         background: url(./image/header/arrow_right.svg) no-repeat right;
         padding-right: 20px;
@@ -384,11 +442,27 @@ a:focus {
     margin: 0 auto;
     border-radius: 8px;
     display: flex;
-    justify-content: space-between;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 15;
+    &--clients {
+      justify-content: space-around;
+      padding: 0 100px;
+      & .more-popup-card__icon {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 4px;
+      } 
+    }
+    &--about {
+      justify-content: space-between;
+      & .more-popup-card__icon {
+        width: 22px;
+        height: 22px;
+        margin-bottom: 8px;
+      }
+    }
   }
 }
 
@@ -427,17 +501,17 @@ a:focus {
         border-bottom: 2px solid #FD9F32;
       }
     }
-    &-about:hover {
+    &-more:hover {
       color: #FD9F32;
       border-bottom: 2px solid #FD9F32;
       padding-bottom: 12px;
-      & .about-popup {
+      & .more-popup {
         transform: translateY(15px);
         opacity: 1;
         visibility: visible;
         transition: all 0.5s ease;
       }
-      & .menu__link-about-title {
+      & .menu__link-title {
         border-bottom: 2px solid #FD9F32;
         z-index: 20;
       }
@@ -464,6 +538,9 @@ a:focus {
       & body {
         overflow: hidden;
       }
+    }
+    &__lang {
+      margin-right: -10%;
     }
     &-hat {
       display: flex;
@@ -657,11 +734,20 @@ a:focus {
   &__image {
     position: absolute;
     &-hands {
-      right: 0;
+      right: -10px;
+      width: 650px;
     }
     &-flour {
-      bottom: -40px;
+      bottom: -100px;
+      right: -40px;
+      width: 840px;
+    }
+    &-train {
+      width: 740px;
       right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
     }
   }
 	&__text {
@@ -723,6 +809,7 @@ a:focus {
     font-size: 22px;
     line-height: 120%;
     margin-top: 16px;
+    max-width: 435px;
 	}
 	&__btn {
     margin-top: 30px;
@@ -1744,8 +1831,10 @@ a:focus {
     & svg {
       width: 32px;
       height: 32px;
+      transition: 0.1s;
       &:hover {
-        opacity: 0.8;
+        fill: #FD9F32;
+        transition: 0.1s;
       }
     }
   }
@@ -2032,15 +2121,20 @@ a:focus {
         line-height: 120%;
         letter-spacing: -0.01em;
         margin-top: 8px;
+        max-width: 350px;
       }
       &__image {
         &-hands {
-          width: 450px;
+          width: 480px;
         }
         &-flour {
           width: 600px;
+          bottom: -60px;
+          right: 0;
         }
-
+        &-train {
+          width: 550px;
+        }
       }
     }
     &-aside {
@@ -2745,9 +2839,6 @@ a:focus {
           height: 12px;
           background: url(./image/footer/arrow_down.svg) no-repeat right;
           transition: 0.3s;
-          &.active {
-            transform: rotate(180deg);
-          }
         }
         &.active {
           &::after {
@@ -2841,13 +2932,15 @@ a:focus {
       height: 480px;
       &__image {
         &-hands {
-          bottom: 40px;
-          right: -15%;
+          bottom: 0;
+          right: -10%;
         }
         &-flour {
-          width: 800px;
           bottom: 0;
-          right: -25px;
+          right: -12%;
+        }
+        &-train {
+          bottom: -300px;
         }
       }
       &__card {
