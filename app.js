@@ -98,20 +98,35 @@ introVideo.addEventListener('click', () => {
 // Accordion (footer)
 const accordionItems = document.querySelectorAll('.footer-menu__title')
 
-if (screenWidth <= '768') {
-    accordionItems.forEach((accordionItem) => {
-        accordionItem.addEventListener('click', () => {
-            accordionItem.classList.toggle('active')
-            const accordionItemBody = accordionItem.nextElementSibling
-            if (accordionItem.classList.contains('active')) {
-                accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px'
-            }
-            else {
-                accordionItemBody.style.maxHeight = 0
-            }
-        })
+accordionItems.forEach((accordionItem) => {
+    accordionItem.addEventListener('click', () => {
+        accordionItem.classList.toggle('active')
+        const accordionItemBody = accordionItem.nextElementSibling
+        if (accordionItem.classList.contains('active')) {
+            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px'
+        }
+        else {
+            accordionItemBody.style.maxHeight = 0
+        }
     })
-}
+})
+
+
+// Accordion (header)
+const menuItems = document.querySelectorAll('.menu-link-more')
+
+menuItems.forEach((menuItem) => {
+    menuItem.addEventListener('click', () => {
+        menuItem.classList.toggle('active')
+        const menuItemBody = menuItem.nextElementSibling
+        if (menuItem.classList.contains('active')) {
+            menuItemBody.style.maxHeight = menuItemBody.scrollHeight + 'px'
+        }
+        else {
+            menuItemBody.style.maxHeight = 0
+        }
+    })
+})
 
 
 // Header search

@@ -164,8 +164,8 @@ a:focus-visible {
     transition: 0.2s;
     background: #664B42;
     color: #664B42;
-    background: url(./image/introduce/arrow_right_dark.svg) no-repeat right;
-    background-size: 14px;
+    background: url(./image/header/arrow_right_hover.svg) no-repeat right;
+    background-size: 16px;
   }
 }
 
@@ -772,16 +772,21 @@ a:focus-visible {
       font-size: 22px;
       line-height: 120%;
       border-bottom: 1px solid #B69D86;
-      padding: 12px 0;
       & a {
         display: block;
         width: 100%;
+        padding: 12px 0;
       }
     }
     
   }
   &-link {
     &-about {
+      &__sublinks {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
       &__sublink {
         font-weight: 500;
         font-size: 18px;
@@ -790,10 +795,7 @@ a:focus-visible {
           margin-bottom: 4px;
         }
         &:last-child {
-          margin-bottom: 4px;
-        }
-        &:first-child {
-          margin-top: 16px;
+          margin-bottom: 16px;
         }
         & a {
           display: flex;
@@ -826,7 +828,6 @@ a:focus-visible {
 
 
 /* ---------------------------INTRO-------------------------- */
-
 
 .intro {
   margin-top: -40px;
@@ -2024,14 +2025,14 @@ a:focus-visible {
     padding-top: 0;
     padding-bottom: 0;
     color: $dark-brown;
-    background: url(./image/footer/arrow_right_brown.svg) no-repeat right;
-    background-size: 14px;
+    background: url(./image/header/arrow_right_hover.svg) no-repeat right;
+    background-size: 16px;
     cursor: pointer;
     max-width: 200px;
     align-self: end;
     margin-top: 24px;
     &:hover {
-      background: url(./image/footer/arrow_right.svg) no-repeat right;
+      background: url(./image/header/arrow_right.svg) no-repeat right;
       background-size: 16px;
       color: #FD9F32;
     }
