@@ -1881,7 +1881,7 @@ a:focus-visible {
 }
 
 .buy-body__text {
-  width: 298px;
+  max-width: 298px;
 }
 
 .buy-body__image {
@@ -3119,6 +3119,257 @@ a:focus-visible {
 
 /* ----------------------------/OUR-COMPANY---------------------- */
 
+/* ------------------------------HISTORY----------------------- */
+
+/* -------------------START------------------ */
+
+.start__img {
+  max-width: 611px;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+.start-card {
+  position: relative;
+}
+
+.start-card__list {
+  max-width: 575px;
+}
+
+.start-card__text {
+  padding-right: 0;
+}
+
+/* -------------------/START------------------ */
+
+/* -------------------CREST------------------- */
+
+.crest {
+  margin-top: 70px;
+  padding-bottom: 90px;
+}
+
+.crest__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.crest__title {
+  max-width: 800px;
+  flex-shrink: 0;
+  margin-right: 15px;
+  margin-top: 160px;
+}
+
+.crest__title span {
+  color: #FD9F32;
+}
+
+.crest__right {
+  position: relative;
+  max-width: 621px;
+}
+
+.crest__card {
+  position: absolute;
+  bottom: -90px;
+  left: -380px;
+}
+
+.crest__rounded {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  transform: rotate(125deg);
+}
+
+.crest__card-body {
+  padding: 30px 23px 20px 30px;
+  width: 280px;
+}
+
+.crest__card-body span {
+  display: block;
+  text-align: right;
+  margin-top: 10px;
+}
+
+/* -------------------/CREST------------------ */
+
+/* ------------------PROGRESS----------------- */
+
+.for-history {
+  background: #f7f7f7;
+  padding-bottom: 1px;
+  --mask: linear-gradient(#000 0 0) bottom/100% calc(100% - 25px) no-repeat, radial-gradient(circle farthest-side,#000 98%,#0000) top/46.25px 50px repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.progress {
+  margin-top: 70px;
+  padding-top: 70px;
+}
+
+.progress-road {
+  margin-top: 65px;
+}
+
+.progress-road__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+
+.progress-road__items::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, #fd9f32 50%, transparent 0);
+  background-size: 15px 2px;
+  height: 2px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.progress-road__items-last::before {
+  max-width: 1000px;
+}
+
+.progress-road__item {
+  padding: 74px 60px 140px 140px;
+}
+
+.progress-road__item-right {
+  position: relative;
+}
+
+.progress-road__item-right::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(0deg, #fd9f32 50%, transparent 0);
+  background-size: 2px 15px;
+  width: 2px;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.progress-road__item-left {
+  position: relative;
+}
+
+.progress-road__item-left::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(0deg, #fd9f32 50%, transparent 0);
+  background-size: 2px 15px;
+  width: 2px;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.progress-road__item-dexter {
+  padding-left: 180px;
+}
+
+.progress-road__item-btn {
+  background: #f7f7f7;
+  position: relative;
+  z-index: 5;
+  padding-left: 0;
+  margin-left: 220px;
+}
+
+.progress-road__item-last {
+  padding-bottom: 0;
+}
+
+.progress-road__year {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 100%;
+  color: #FD9F32;
+  position: relative;
+}
+
+.progress-road__year::before {
+  content: "";
+  position: absolute;
+  top: -83px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: url("../img/history/progress/point.svg") no-repeat top;
+  width: 30px;
+  height: 73px;
+}
+
+.progress-road__text {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 110%;
+  color: #664B42;
+  max-width: 440px;
+  margin-top: 16px;
+}
+
+.progress-road__text-first {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.progress-road__forimg {
+  --mask: linear-gradient(#000 0 0) center/calc(100% - 12.95px) calc(100% - 12.95px) no-repeat, radial-gradient(farthest-side,#000 98%,#0000) 0 0/14px 14px round;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  margin-top: 30px;
+}
+
+.progress-road__forimg-diploma {
+  max-width: 187px;
+  padding: 15px;
+  background: #B69D86;
+}
+
+.progress-road__forimg-volod {
+  max-width: 250px;
+  background: #ffffff;
+  padding: 25px;
+}
+
+.progress-road__img-diploma {
+  width: 157px;
+}
+
+.progress-road__img-volod {
+  width: 197px;
+}
+
+.progress-road__btn {
+  position: relative;
+  margin-left: -100px;
+}
+
+.progress-road__btn::before {
+  content: "";
+  position: absolute;
+  top: -88px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: url("../img/history/progress/point.svg") no-repeat top;
+  width: 30px;
+  height: 73px;
+}
+
+/* -----------------/PROGRESS----------------- */
+
+/* ------------------------------/HISTORY----------------------- */
+
 /* ----------------------------FOOTER----------------------- */
 
 .footer {
@@ -3401,6 +3652,10 @@ a:focus-visible {
   .equip__cards {
     margin-top: 90px;
   }
+
+  .start__img {
+    max-width: 520px;
+  }
 }
 
 @media (max-width: 1390px) {
@@ -3540,6 +3795,37 @@ a:focus-visible {
 
   .faces__text {
     margin-left: 30px;
+  }
+
+  .start__img {
+    max-width: 450px;
+    margin-right: 50px;
+  }
+
+  .crest__title {
+    margin-top: 0;
+    font-size: 30px;
+    max-width: 650px;
+  }
+
+  .progress-road__item {
+    padding-left: 120px;
+  }
+
+  .progress-road__item-dexter--2 {
+    padding-right: 0;
+  }
+
+  .progress-road__item-dexter--2 .progress-road__text {
+    max-width: 100%;
+  }
+
+  .progress-road__item-btn {
+    margin-left: 180px;
+  }
+
+  .progress-road__btn {
+    margin-left: -230px;
   }
 }
 
@@ -4119,6 +4405,57 @@ a:focus-visible {
     line-height: 110%;
     max-width: 580px;
   }
+
+  .crest {
+    padding-bottom: 50px;
+  }
+
+  .crest__title {
+    font-size: 26px;
+    max-width: 570px;
+  }
+
+  .crest__card {
+    left: -280px;
+    bottom: -50px;
+  }
+
+  .progress-road__item {
+    padding-left: 100px;
+    padding-bottom: 70px;
+  }
+
+  .progress-road__item-btn {
+    margin-left: 150px;
+  }
+
+  .progress-road__year {
+    font-size: 26px;
+    line-height: 110%;
+  }
+
+  .progress-road__year::before {
+    top: -85px;
+  }
+
+  .progress-road__text {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+  }
+
+  .progress-road__btn {
+    margin-left: -210px;
+  }
+
+  .progress-road__forimg-diploma {
+    max-width: 170px;
+  }
+
+  .progress-road__forimg-volod {
+    max-width: 270px;
+  }
 }
 
 @media (max-width: 960px) {
@@ -4161,6 +4498,16 @@ a:focus-visible {
 
   .research-content__flask {
     margin-top: 100px;
+  }
+
+  .start__img {
+    max-width: 400px;
+    margin-right: 0;
+  }
+
+  .crest__card {
+    left: -300px;
+    bottom: -80px;
   }
 }
 
@@ -4407,6 +4754,28 @@ a:focus-visible {
 
   .faces__img {
     width: 140px;
+  }
+
+  .crest {
+    padding-bottom: 80px;
+  }
+
+  .crest__title {
+    font-size: 22px;
+    max-width: 500px;
+  }
+
+  .crest__card {
+    left: -320px;
+    bottom: -80px;
+  }
+
+  .progress-road__item {
+    padding-left: 60px;
+  }
+
+  .progress-road__btn {
+    margin-left: -170px;
   }
 }
 
@@ -5255,6 +5624,122 @@ a:focus-visible {
     max-width: 350px;
   }
 
+  .start__img {
+    margin-left: auto;
+    margin-right: -190px;
+    max-width: 600px;
+  }
+
+  .start-card__text {
+    padding-bottom: 0;
+    padding-right: 30px;
+  }
+
+  .start-card__item {
+    font-size: 16px;
+    line-height: 130%;
+  }
+
+  .crest {
+    padding-bottom: 210px;
+  }
+
+  .crest__container {
+    flex-direction: column;
+  }
+
+  .crest__right {
+    margin-top: 20px;
+    max-width: 100%;
+    align-self: center;
+  }
+
+  .crest__img img {
+    padding: 0 20vw;
+  }
+
+  .crest__title {
+    font-size: 18px;
+    max-width: 420px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .crest__card {
+    left: 0;
+    bottom: -210px;
+  }
+
+  .crest__rounded {
+    left: 0;
+  }
+
+  .progress {
+    padding-top: 50px;
+  }
+
+  .progress-road {
+    margin-top: 30px;
+  }
+
+  .progress-road__items {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-road__items::before {
+    display: none;
+  }
+
+  .progress-road__item {
+    padding: 0;
+    margin-top: 150px;
+    justify-self: center;
+    text-align: center;
+  }
+
+  .progress-road__item-right::after {
+    display: none;
+  }
+
+  .progress-road__item-left::before {
+    display: none;
+  }
+
+  .progress-road__item-btn {
+    margin-left: 0;
+    margin-top: 0;
+    margin-top: 146px;
+  }
+
+  .progress-road__year {
+    padding-top: 146px;
+  }
+
+  .progress-road__year::before {
+    background: url("../img/history/progress/point_long.svg") no-repeat top;
+    width: 30px;
+    height: 130px;
+    top: 0;
+  }
+
+  .progress-road__btn {
+    margin-left: 0;
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+
+  .progress-road__btn::before {
+    background: url("../img/history/progress/point_long.svg") no-repeat top;
+    width: 30px;
+    height: 130px;
+    top: -145px;
+  }
+
+  .progress-road__forimg {
+    margin: 0 auto;
+    margin-top: 16px;
+  }
+
   .footer__logo {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -5385,6 +5870,10 @@ a:focus-visible {
   .research__img {
     max-width: 100%;
   }
+
+  .crest__img img {
+    padding: 0 13vw;
+  }
 }
 
 @media (max-width: 390px) {
@@ -5394,6 +5883,10 @@ a:focus-visible {
 
   .small-container {
     padding: 0 15px;
+  }
+
+  .title-h1 {
+    font-size: 26px;
   }
 
   .title-h3 {
@@ -5636,11 +6129,27 @@ a:focus-visible {
   .faces__img {
     width: 42vw;
   }
+
+  .crest__title {
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  .crest__img img {
+    padding: 0;
+  }
+
+  .progress-road__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+  }
 }
 
 @media (max-width: 330px) {
   .btn-orange {
     font-size: 14px;
+    width: 100%;
   }
 
   .path__title {
@@ -5753,6 +6262,19 @@ a:focus-visible {
 
   .faces__text {
     margin-left: 15px;
+  }
+
+  .crest__card-body {
+    width: 240px;
+  }
+
+  .progress-road__btn {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .progress-road__item-btn {
+    width: 100%;
   }
 
   .footer__logo {
