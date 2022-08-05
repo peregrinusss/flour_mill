@@ -6166,6 +6166,10 @@ a:focus-visible {
     overflow-y: hidden;
   }
 
+  .wins-certificates > :last-child {
+    padding-right: 20px;
+  }
+
   .wins-certificates__item {
     width: 262px;
     flex-shrink: 0;
