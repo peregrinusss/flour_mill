@@ -170,6 +170,13 @@ a:focus-visible {
   color: #664B42;
 }
 
+.title-h3-main {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 100%;
+  color: #664B42;
+}
+
 .title-h4 {
   font-weight: 700;
   font-size: 26px;
@@ -3370,6 +3377,251 @@ a:focus-visible {
 
 /* ------------------------------/HISTORY----------------------- */
 
+/* -----------------------------AWARDS------------------------- */
+
+/* ---------------------DOCS--------------------- */
+
+.docs__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 120px;
+}
+
+.docs__links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.docs-link {
+  width: 260px;
+  background: #FFFFFF;
+  box-shadow: 9px 13px 26px -12px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 35px 15px 25px;
+}
+
+.docs-link:not(:last-child) {
+  margin-right: 30px;
+}
+
+.docs-link__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.docs-link:hover .docs-link__text {
+  color: #FD9F32;
+  transition: 0.2s;
+}
+
+.docs-link__img {
+  width: 59px;
+  height: 80px;
+}
+
+.docs-link__text {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 110%;
+  color: #664B42;
+  text-align: center;
+  margin-top: 30px;
+  transition: 0.2s;
+}
+
+/* ---------------------/DOCS--------------------- */
+
+/* -------------------DOCUMENTATION--------------- */
+
+.documentation {
+  margin-top: 70px;
+}
+
+.documentation__title {
+  margin-bottom: 50px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.table-wrap table {
+  border-collapse: collapse;
+}
+
+.table-wrap table td,
+.table-wrap table th {
+  padding: 0.5em;
+  padding: 20px 10px;
+}
+
+.table-wrap table td {
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  border: 1px solid #A28276;
+  color: #A28276;
+}
+
+.table-wrap table th {
+  text-align: center;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 110%;
+  border: 1px solid #664B42;
+  color: #664B42;
+}
+
+.table-wrap table [download] {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.table-wrap__download {
+  position: relative;
+  padding-right: 22px;
+  transition: 0.2s;
+  max-width: 180px;
+}
+
+.table-wrap__download:hover {
+  transition: 0.2s;
+  color: #FD9F32;
+}
+
+.table-wrap__download:hover::after {
+  transition: 0.2s;
+  background: url("../img/icons/arrow_download_hover.svg") no-repeat right;
+  background-size: 15px;
+}
+
+.table-wrap__download::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  transform: translateY(50%);
+  width: 15px;
+  height: 15px;
+  background: url("../img/icons/arrow_download.svg") no-repeat right;
+  background-size: 15px;
+  transition: 0.2s;
+}
+
+.table-wrap__first-col {
+  width: 158px;
+  min-width: 70px;
+}
+
+.table-wrap__second-col {
+  width: 400px;
+  min-width: 245px;
+}
+
+.table-wrap__third-col {
+  width: 545px;
+  min-width: 245px;
+}
+
+.table-wrap__fourth-col {
+  width: 400px;
+  min-width: 245px;
+}
+
+.table-wrap__fifth-col {
+  width: 285px;
+  min-width: 165px;
+}
+
+/* ------------------/DOCUMENTATION--------------- */
+
+/* ----------------------WINS--------------------- */
+
+.wins {
+  margin-top: 70px;
+}
+
+.wins__title {
+  margin-bottom: 50px;
+}
+
+.wins-list:last-child {
+  margin-top: 80px;
+}
+
+.wins-list__subtitle {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 110%;
+  color: #A28276;
+}
+
+.wins-list__title {
+  margin-top: 8px;
+}
+
+.wins-certificates {
+  display: flex;
+  margin-top: 40px;
+}
+
+.wins-certificates__item {
+  max-width: 390px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wins-certificates__item:not(:last-child) {
+  margin-right: 60px;
+}
+
+.wins-certificates__img-cert {
+  padding: 0 50px;
+}
+
+.wins-certificates__img-cert img {
+  width: 100%;
+  border: 10px solid #A28276;
+  box-shadow: 9px 13px 26px -12px rgba(0, 0, 0, 0.25);
+}
+
+.wins-certificates__img-diploma img {
+  width: 100%;
+  border: 10px solid #A28276;
+  box-shadow: 9px 13px 26px -12px rgba(0, 0, 0, 0.25);
+}
+
+.wins-certificates__text {
+  max-width: 290px;
+}
+
+.wins-certificates__subtitle {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 120%;
+  color: #B69D86;
+  display: block;
+  margin-top: 20px;
+}
+
+.wins-certificates__title {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 110%;
+  color: #664B42;
+  display: block;
+  margin-top: 6px;
+}
+
+/* ----------------------/WINS--------------------- */
+
+/* -----------------------------AWARDS------------------------- */
+
 /* ----------------------------FOOTER----------------------- */
 
 .footer {
@@ -3655,6 +3907,10 @@ a:focus-visible {
 
   .start__img {
     max-width: 520px;
+  }
+
+  .docs__card {
+    padding: 70px 10%;
   }
 }
 
@@ -4034,6 +4290,10 @@ a:focus-visible {
 
   .title-h2 {
     font-size: 36px;
+  }
+
+  .title-h3-main {
+    font-size: 26px;
   }
 
   .contacts__container {
@@ -4456,6 +4716,75 @@ a:focus-visible {
   .progress-road__forimg-volod {
     max-width: 270px;
   }
+
+  .docs__card {
+    padding: 70px 40px;
+  }
+
+  .table-wrap table td {
+    font-size: 14px;
+    line-height: 130%;
+    padding: 10px 5px;
+  }
+
+  .table-wrap table th {
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    padding: 5px;
+  }
+
+  .table-wrap__download {
+    padding-right: 0;
+    padding-bottom: 25px;
+  }
+
+  .table-wrap__download::after {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+
+  .wins-certificates {
+    padding: 0 20px;
+  }
+
+  .wins-certificates__text {
+    max-width: 220px;
+  }
+
+  .wins-certificates__text-cert {
+    max-width: 160px;
+  }
+
+  .wins-certificates__img-cert {
+    padding: 0;
+  }
+
+  .wins-certificates__img-firstline {
+    padding: 0 8.5%;
+  }
+
+  .wins-certificates__title {
+    margin-top: 4px;
+  }
+
+  .wins-certificates__subtitle {
+    margin-top: 10px;
+  }
+
+  .wins-list:last-child {
+    margin-top: 100px;
+  }
+
+  .wins-list__subtitle {
+    font-size: 22px;
+    line-height: 120%;
+  }
+
+  .wins-list__title {
+    margin-top: 4px;
+  }
 }
 
 @media (max-width: 960px) {
@@ -4777,6 +5106,50 @@ a:focus-visible {
   .progress-road__btn {
     margin-left: -170px;
   }
+
+  .docs__links {
+    flex-direction: column;
+  }
+
+  .docs-link {
+    width: 500px;
+    margin: 0 auto;
+    padding-left: 35px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .docs-link:not(:last-child) {
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+
+  .docs-link__body {
+    flex-direction: row;
+    width: 260px;
+  }
+
+  .docs-link__text {
+    text-align: start;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    margin-top: 0;
+    margin-left: 25px;
+  }
+
+  .docs-link__img {
+    width: 47px;
+    height: 64px;
+  }
+
+  .docs__card {
+    height: 641px;
+  }
+
+  .wins-certificates__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -4798,8 +5171,8 @@ a:focus-visible {
     line-height: 110%;
   }
 
-  .title-h3 {
-    font-size: 30px;
+  .title-h3-main {
+    font-size: 22px;
   }
 
   .learn-more {
@@ -5740,6 +6113,48 @@ a:focus-visible {
     margin-top: 16px;
   }
 
+  .docs-link {
+    width: 100%;
+  }
+
+  .documentation__title {
+    margin-bottom: 30px;
+  }
+
+  .wins__title {
+    margin-bottom: 30px;
+  }
+
+  .wins-certificates {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .wins-certificates__item {
+    width: 262px;
+    flex-shrink: 0;
+  }
+
+  .wins-certificates__img-firstline {
+    padding: 0;
+  }
+
+  .wins-certificates__img-cert {
+    width: 197px;
+  }
+
+  .wins-list__subtitle {
+    font-size: 18px;
+  }
+
+  .wins-list:last-child {
+    margin-top: 85px;
+  }
+
+  .wins__container {
+    padding-right: 0;
+  }
+
   .footer__logo {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -6144,6 +6559,14 @@ a:focus-visible {
     font-size: 16px;
     line-height: 130%;
   }
+
+  .docs__card {
+    padding: 95px 25px;
+  }
+
+  .wins__container {
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 330px) {
@@ -6275,6 +6698,20 @@ a:focus-visible {
 
   .progress-road__item-btn {
     width: 100%;
+  }
+
+  .docs-link {
+    padding: 25px 15px;
+  }
+
+  .docs-link__body {
+    flex-direction: column;
+  }
+
+  .docs-link__text {
+    margin-left: 0;
+    text-align: center;
+    margin-top: 10px;
   }
 
   .footer__logo {
