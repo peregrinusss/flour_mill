@@ -3622,6 +3622,34 @@ a:focus-visible {
 
 /* -----------------------------AWARDS------------------------- */
 
+/* ----------------------------PHOTOS------------------------- */
+
+/* ---------------------VIDEOS----------------- */
+
+.about-head-videos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  margin-top: 50px;
+}
+
+.about-head-videos__body-secondline {
+  margin-top: 15px;
+}
+
+.about-head-videos__title {
+  margin-top: 30px;
+}
+
+.about-head__video {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* --------------------/VIDEOS----------------- */
+
+/* ----------------------------/PHOTOS------------------------- */
+
 /* ----------------------------FOOTER----------------------- */
 
 .footer {
@@ -4784,6 +4812,14 @@ a:focus-visible {
 
   .wins-list__title {
     margin-top: 4px;
+  }
+
+  .about-head-videos {
+    gap: 30px;
+  }
+
+  .about-head-videos__body-secondline {
+    margin-top: 30px;
   }
 }
 
@@ -6155,6 +6191,22 @@ a:focus-visible {
     padding-right: 0;
   }
 
+  .about-head-videos {
+    grid-template-columns: 0.8fr;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .about-head-videos__title {
+    font-size: 22px;
+    line-height: 120%;
+    margin-top: 24px;
+  }
+
+  .about-head-videos__body-secondline {
+    margin-top: 0;
+  }
+
   .footer__logo {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -6288,6 +6340,11 @@ a:focus-visible {
 
   .crest__img img {
     padding: 0 13vw;
+  }
+
+  .about-head-videos {
+    grid-template-columns: 1fr;
+    justify-content: center;
   }
 }
 
