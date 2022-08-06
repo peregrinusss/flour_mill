@@ -4149,7 +4149,7 @@ a:focus-visible {
 .individual-pack__first :first-child {
   padding-left: 30px;
   background: url("../img/products/goods/icon_1.svg") no-repeat left;
-  background-size: 22px;
+  background-size: 20px;
   margin-bottom: 5px;
 }
 
@@ -4160,7 +4160,7 @@ a:focus-visible {
 .individual-pack__second :first-child {
   padding-left: 30px;
   background: url("../img/products/goods/icon_2.svg") no-repeat left;
-  background-size: 20px;
+  background-size: 18px;
   margin-bottom: 5px;
 }
 
@@ -7030,11 +7030,13 @@ a:focus-visible {
   }
 
   .wins-certificates > :last-child {
-    margin-right: 20px;
+    box-sizing: content-box;
+    padding-right: 20px;
   }
 
   .wins-certificates > :first-child {
-    margin-left: 20px;
+    box-sizing: content-box;
+    padding-left: 20px;
   }
 
   .wins-certificates__item {
