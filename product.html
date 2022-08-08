@@ -389,505 +389,262 @@
     <main class="main">
         <div class="products__bg">
             <section class="page-path">
-    <a href="#" class="page-path__link page-path__link-main">Главная</a>
-    <span class="page-path__link page-path__current">Продукция</span>
-</section>
-
-            <section class="products-head">
-                <div class="products-head__container header__container">
-                    <div class="products-head__content">
-                        <div class="products-head__text">
-                            <h1 class="products-head__title title-h1-main">Продукция Володарского мукомольного завода</h1>
-                            <span class="products-head__subtitle">“Володарочка” розничный бренд Володарского мукомольного комбината</span>
+                <a href="#" class="page-path__link page-path__link-main">Главная</a>
+                <a href="#" class="page-path__link page-path__link-main page-path__current">Продукция</a>
+                <span href="#" class="page-path__link page-path__current">Мука пшеничная хлебопекарная Высший сорт</span>
+            </section>
+            <section class="product">
+                <div class="product__container main-container">
+                    <div class="product-card">
+                        <div class="product-card__text">
+                            <h1 class="product-card__title">Мука пшеничная хлебо&shy;пекарная</h1>
+                            <div class="product-card__btns">
+                                <button class="product-card__order btn-orange">Заказать поставку</button>
+                                <button id="tobasket-individ" class="product-card__tobasket">
+                                    <img src="img/products/goods/shopping-cart.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="product-card__quality">
+                                <h2 class="product-card__sort">Высший сорт</h2>
+                                <span>ГОСТ 26574-2017 <br>ГОСТ Р ИСО 22000-2019</span>
+                            </div>
                         </div>
-                        <picture class="products-head__img">
-                            <source srcset="img/products/head/farm__house.webp" type="image/webp">
-                            <img src="img/products/head/farm__house.png" alt="Домик на ферме">
+                        <picture class="product-card__img">
+                            <source src="img/products/goods/product_2.webp" type="iamge/webp">
+                            <img src="img/products/goods/product_2.png" alt="Мука пшеничная Хлебопекарная">
                         </picture>
                     </div>
-                    <div class="products-item__filter filter">
-                        <ul class="filter__items">
-                            <li id="filterBtnWrapper" class="filter__item filter__item-active">
-                                <button id="filterBtn" data-filter="all">Всё</button>
-                            </li>
-                            <li id="filterBtnWrapper" class="filter__item">
-                                <button id="filterBtn" data-filter="groat">Крупа</button>
-                            </li>
-                            <li id="filterBtnWrapper" class="filter__item">
-                                <button id="filterBtn" data-filter="flour">Мука</button>
-                            </li>
-                            <li id="filterBtnWrapper" class="filter__item">
-                                <button id="filterBtn" data-filter="bran">Отруби</button>
-                            </li>
-                            <li id="filterBtnWrapper" class="filter__item">
-                                <button id="filterBtn" data-filter="grain-waste">Зерноотходы</button>
-                            </li>
-                        </ul>
+                </div>
+            </section>
+            <section class="descript">
+                <div class="descript__container">
+                    <div class="descript__body">
+                        <div class="descript__btns">
+                            <div id="tabBtn" data-tab="#tabItem-1" class="descript__btn active">Доставка</div>
+                            <div id="tabBtn" data-tab="#tabItem-2" class="descript__btn">Описание</div>
+                            <div id="tabBtn" data-tab="#tabItem-3" class="descript__btn">Характеристики</div>
+                            <div id="tabBtn" data-tab="#tabItem-4" class="descript__btn">Тара</div>
+                        </div>
+                        <div class="descript__items">
+                            <div id="tabItem-1" class="descript__item active descript-delivery tabItem">
+                                <h4 class="descript-delivery__title">Доставка данной продукции осуществляется с помощью:</h4>
+                                <div class="descript-delivery__cards">
+                                    <div class="descript-delivery__card">
+                                        <picture class="descript-delivery__img">
+                                            <source src="img/product/descript/delivery_1.webp" type="image/webp">
+                                            <img src="img/product/descript/delivery_1.png" alt="Муковоз">
+                                        </picture>
+                                        <div class="descript-delivery__text">
+                                            <h5>Муковоз</h5>
+                                            <span>Бестарно</span>
+                                        </div>
+                                    </div>
+                                    <div class="descript-delivery__card">
+                                        <picture class="descript-delivery__img">
+                                            <source src="img/product/descript/delivery_2.webp" type="image/webp">
+                                            <img src="img/product/descript/delivery_2.png" alt="Муковоз">
+                                        </picture>
+                                        <div class="descript-delivery__text">
+                                            <h5>Фура</h5>
+                                            <span>В таре</span>
+                                        </div>
+                                    </div>
+                                    <div class="descript-delivery__card">
+                                        <picture class="descript-delivery__img">
+                                            <source src="img/product/descript/delivery_3.webp" type="image/webp">
+                                            <img src="img/product/descript/delivery_3.png" alt="Муковоз">
+                                        </picture>
+                                        <div class="descript-delivery__text">
+                                            <h5>Вагон</h5>
+                                            <span>В таре</span>
+                                        </div>
+                                    </div>
+                                    <div class="descript-delivery__card">
+                                        <picture class="descript-delivery__img">
+                                            <source src="img/product/descript/delivery_4.webp" type="image/webp">
+                                            <img src="img/product/descript/delivery_4.png" alt="Муковоз">
+                                        </picture>
+                                        <div class="descript-delivery__text">
+                                            <h5>Зерновоз</h5>
+                                            <span>Бестарно</span>
+                                        </div>
+                                    </div>
+                                    <div class="descript-delivery__card">
+                                        <picture class="descript-delivery__img">
+                                            <source src="img/product/descript/delivery_5.webp" type="image/webp">
+                                            <img src="img/product/descript/delivery_5.png" alt="Муковоз">
+                                        </picture>
+                                        <div class="descript-delivery__text">
+                                            <h5>Хоппер</h5>
+                                            <span>Бестарно</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tabItem-2" class="descript__item descript-describe tabItem">
+                                <span class="descript-describe__text">Мука высшего сорта – белая мука из пшеницы твёрдых сортов. В пшеничной муке высшего сорта содержится незначительное количество жира, клетчатки, сахара и белков. Зато в ней много крахмала (около 80%). Этот сорт муки отличается белым цветом и прекрасными хлебопекарными свойствами. Выпечка получается объемной с мелкой пористостью.</span>
+                                <div class="descript-describe__ideal">  
+                                    <h4 class="descript-describe__title">Идеальна для</h4>
+                                    <div class="descript-describe__items">
+                                        <span class="descript-describe__item descript-describe__item-first">Дрожжевого теста</span>
+                                        <span class="descript-describe__item descript-describe__item-second">Песочного теста</span>
+                                        <span class="descript-describe__item descript-describe__item-third">Слоеного теста</span>
+                                        <span class="descript-describe__item descript-describe__item-fourth">Мучной заправки</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tabItem-3" class="descript__item descript-parameters tabItem">
+                                <div class="descript-parameters__items">
+                                    <div class="descript-parameters__item">
+                                        <h5 class="descript-parameters__title">Пищевая ценность (100г)</h5>
+                                        <span>
+                                            Белки 11 <br>
+                                            Жиры 11 <br>
+                                            Углеводы 11 <br>
+                                            Энергетическая ценность 1260кДж <br>
+                                            Калорий 330
+                                        </span>
+                                    </div>
+                                    <div class="descript-parameters__item">
+                                        <h5 class="descript-parameters__title">Характеристики</h5>
+                                        <span>
+                                            Цвет белый или белый с кремовым оттенком; <br>
+                                            Влажность не более 15,0%; <br>
+                                            Зольность не более 0,45%; <br>
+                                            Клейковина не менее 28%; <br>
+                                            Число падения не менее 200 c.
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="descript-parameters__footer">
+                                    <span>Также можем произвести муку по вашим индивидуальным характеристикам</span>
+                                </div>
+                            </div>
+                            <div id="tabItem-4" class="descript__item descript-package tabItem">
+                                <div class="descript-package__body">
+                                    <h4 class="descript-package__title">Можем упаковать продукт в различные тары</h4>
+                                    <div class="descript-package__items">
+                                        <div class="descript-package__item">
+                                            <picture class="descript-package__img descript-package__img-1">
+                                                <source src="img/product/descript/package.webp" type="image/webp">
+                                                <img src="img/product/descript/package.png" alt="Пакет">
+                                            </picture>
+                                            <div class="descript-package__subtitle">
+                                                <span>Пакет</span>
+                                                1-1,8-2 кг
+                                            </div>
+                                        </div>
+                                        <div class="descript-package__item">
+                                            <picture class="descript-package__img descript-package__img-2">
+                                                <source src="img/product/descript/package.webp" type="image/webp">
+                                                <img src="img/product/descript/package.png" alt="Мешок">
+                                            </picture>
+                                            <div class="descript-package__subtitle">
+                                                <span>Мешок</span>
+                                                5-10-25-50 кг
+                                            </div>
+                                        </div>
+                                        <div class="descript-package__item">
+                                            <picture class="descript-package__img descript-package__img-3">
+                                                <source src="img/product/descript/package.webp" type="image/webp">
+                                                <img src="img/product/descript/package.png" alt="Мешок">
+                                            </picture>
+                                            <div class="descript-package__subtitle">
+                                                <span>Биг-Бэг</span>
+                                                1000 кг
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="statistics">
+                <div class="statistics__container">
+                    <div class="statistics__cards">
+                        <div class="statistics__card">
+                            <img src="img/product/statistics/icon_1.svg" class="statistics__img">
+                            <div class="statistics__text">
+                                <h4 class="statistics__title">Объемы</h4>
+                                <span class="statistics__subtitle">Мельница производительностью 700 тн в сутки обеспечивает постоянное наличие продукции</span>
+                            </div>
+                        </div>
+                        <div class="statistics__card">
+                            <img src="img/product/statistics/icon_2.svg" class="statistics__img">
+                            <div class="statistics__text">
+                                <h4 class="statistics__title">Качество</h4>
+                                <span class="statistics__subtitle">Cоответствие муки всем принятым нормам, стандартам и ГОСТам</span>
+                            </div>
+                        </div>
+                        <div class="statistics__card">
+                            <img src="img/product/statistics/icon_3.svg" class="statistics__img">
+                            <div class="statistics__text">
+                                <h4 class="statistics__title">Ответственность</h4>
+                                <span class="statistics__subtitle">Высокая ответственность
+                                    за выполнение договорных обязательств</span>
+                            </div>
+                        </div>
+                        <div class="statistics__card">
+                            <img src="img/product/statistics/icon_4.svg" class="statistics__img">
+                            <div class="statistics__text">
+                                <h4 class="statistics__title">Свойства</h4>
+                                <span class="statistics__subtitle">Много крахмала, поэтому отилчные хлебоперкарные свойства</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
         </div>
-        <section class="goods">
-            <div class="goods__container header__container">
-                <div class="goods__items">
-                    <div class="goods-item groat" id="filterCard">
-                        <div class="goods-item__body">
-                            <div class="goods-item__text">
-                                <h3 class="goods-item__title title-h3-main">Крупа Манная</h3>
-                                <div class="goods-item__types">
-                                    <a href="#">
-                                        <div class="goods-item__type">
-                                            <span>Марки м</span>
-                                            <div class="goods-item__btns">
-                                                <button class="goods-item__btn btn-orange">Оставить заявку</button>
-                                                <button id="tobasket" class="goods-item__tobasket">Добавить в корзину</button>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <picture class="goods-item__img">
-                                <source src="img/products/goods/product_1.webp" type="image/webp">
-                                <img src="img/products/goods/product_1.png" alt="Мука пшеничная">
+        <section class="another">
+            <div class="another__container main-container">
+                <h2 class="another__title title-h2 title-center">Другие виды производимой продукции</h2>
+                <div class="another__cards">
+                    <a href="#">
+                        <div class="another__card">
+                            <picture class="another__img">
+                                <source src="img/product/another/product_1.webp" type="image/webp">
+                                <img src="img/product/another/product_1.png" alt="Мука пшеничная хлебопекарная 1 сорт">
                             </picture>
+                            <span class="another__name">Мука пшеничная хлебопекарная 1 сорт</span>
                         </div>
-                        <button class="goods-item__forextra">читать ещё</button>
-                        <div class="goods-item__extra">
-                            <div class="goods-item-individual">
-                                <span class="goods-item-individual__title">Мука по индивидуальным параметрам</span>
-                                <div class="goods-item-individual__btns">
-                                    <button class="goods-item-individual__btn btn-orange">Оставить заявку</button>
-                                    <button id="tobasket-individ" class="goods-item__tobasket">Добавить в корзину</button>
-                                </div>
-                            </div>
-                            <div class="goods-item-individual__footer individual">
-                                <div class="individual__body">
-                                    <div class="individual-create">
-                                        <span class="individual__title">Произведем</span>
-                                        <span class="individual-create__subtitle">Произведем продукцию по вашим индивидуальным потребностям </span>
-                                    </div>
-                                    <div class="individual-pack">
-                                        <span class="individual__title">Упакуем</span>
-                                        <div class="individual-pack__info">
-                                            <div class="individual-pack__first">
-                                                <span>Пакет</span>
-                                                <span>2 кг</span>
-                                            </div>
-                                            <div class="individual-pack__second">
-                                                <span>Мешок</span>
-                                                <span>5,10,25,50 кг</span>
-                                            </div>
-                                            <div class="individual-pack__third">
-                                                <span>Авто</span>
-                                                <span>в таре, бестарно</span>
-                                            </div>
-                                            <div class="individual-pack__fourth">
-                                                <span>Вагон</span>
-                                                <span>в таре, бестарно</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="individual-delivery">
-                                        <span class="individual__title">Доставим в срок</span>
-                                        <div class="individual-delivery__info">
-                                            <span class="individual-delivery__first">Само&shy;вывоз</span>
-                                            <span class="individual-delivery__second">Авто</span>
-                                            <span class="individual-delivery__third">Муковоз</span>
-                                            <span class="individual-delivery__fourth">Вагон</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="goods-item flour" id="filterCard">
-                        <div class="goods-item__body">
-                            <div class="goods-item__text">
-                                <h3 class="goods-item__title title-h3-main">Мука пшеничная Хлебопекарная</h3>
-                                <div class="goods-item__types">
-                                    <a href="#">
-                                        <div class="goods-item__type">
-                                            <span>Высший сорт</span>
-                                            <div class="goods-item__btns">
-                                                <button class="goods-item__btn btn-orange">Оставить заявку</button>
-                                                <button id="tobasket" class="goods-item__tobasket">Добавить в корзину</button>
-                                            </div>
-                                        </div>
-                                        <div class="goods-item__type">
-                                            <span>Сорт Экста</span>
-                                            <div class="goods-item__btns">
-                                                <button class="goods-item__btn btn-orange">Оставить заявку</button>
-                                                <button id="tobasket" class="goods-item__tobasket">Добавить в корзину</button>
-                                            </div>
-                                        </div>
-                                        <div class="goods-item__type">
-                                            <span>1 сорт</span>
-                                            <div class="goods-item__btns">
-                                                <button class="goods-item__btn btn-orange">Оставить заявку</button>
-                                                <button id="tobasket" class="goods-item__tobasket">Добавить в корзину</button>
-                                            </div>
-                                        </div>
-                                        <div class="goods-item__type">
-                                            <span>2 сорт</span>
-                                            <div class="goods-item__btns">
-                                                <button class="goods-item__btn btn-orange">Оставить заявку</button>
-                                                <button id="tobasket" class="goods-item__tobasket">Добавить в корзину</button>
-                                            </div>
-                                        </div>
-                                        <div class="goods-item__type">
-                                            <span>М55-23</span>
-                                            <div class="goods-item__btns">
-                                                <button class="goods-item__btn btn-orange">Оставить заявку</button>
-                                                <button id="tobasket" class="goods-item__tobasket">Добавить в корзину</button>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <picture class="goods-item__img">
-                                <source src="img/products/goods/product_2.png" type="image/webp">
-                                <img src="img/products/goods/product_2.png" alt="Мука пшеничная">
+                    </a>
+                    <a href="#">
+                        <div class="another__card">
+                            <picture class="another__img">
+                                <source src="img/product/another/product_2.webp" type="image/webp">
+                                <img src="img/product/another/product_2.png" alt="Мука ржаная хлебопекарная обдирная">
                             </picture>
+                            <span class="another__name">Мука ржаная хлебопекарная обдирная</span>
                         </div>
-                        <button class="goods-item__forextra">читать ещё</button>
-                        <div class="goods-item__extra">
-                            <div class="goods-item-individual">
-                                <span class="goods-item-individual__title">Мука по индивидуальным параметрам</span>
-                                <div class="goods-item-individual__btns">
-                                    <button class="goods-item-individual__btn btn-orange">Оставить заявку</button>
-                                    <button id="tobasket-individ" class="goods-item__tobasket">Добавить в корзину</button>
-                                </div>
-                            </div>
-                            <div class="goods-item-individual__footer individual">
-                                <div class="individual__body">
-                                    <div class="individual-create">
-                                        <span class="individual__title">Произведем</span>
-                                        <span class="individual-create__subtitle">Произведем продукцию по вашим индивидуальным потребностям </span>
-                                    </div>
-                                    <div class="individual-pack">
-                                        <span class="individual__title">Упакуем</span>
-                                        <div class="individual-pack__info">
-                                            <div class="individual-pack__first">
-                                                <span>Пакет</span>
-                                                <span>2 кг</span>
-                                            </div>
-                                            <div class="individual-pack__second">
-                                                <span>Мешок</span>
-                                                <span>5,10,25,50 кг</span>
-                                            </div>
-                                            <div class="individual-pack__third">
-                                                <span>Авто</span>
-                                                <span>в таре, бестарно</span>
-                                            </div>
-                                            <div class="individual-pack__fourth">
-                                                <span>Вагон</span>
-                                                <span>в таре, бестарно</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="individual-delivery">
-                                        <span class="individual__title">Доставим в срок</span>
-                                        <div class="individual-delivery__info">
-                                            <span class="individual-delivery__first">Само&shy;вывоз</span>
-                                            <span class="individual-delivery__second">Авто</span>
-                                            <span class="individual-delivery__third">Муковоз</span>
-                                            <span class="individual-delivery__fourth">Вагон</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="goods-item flour" id="filterCard">
-                        <div class="goods-item__body">
-                            <div class="goods-item__text">
-                                <h3 class="goods-item__title title-h3-main">Ржаная мука</h3>
-                                <div class="goods-item__types">
-                                    <a href="#">
-                                        <div class="goods-item__type">
-                                            <span>Обдирная</span>
-                                            <div class="goods-item__btns">
-                                                <button class="goods-item__btn btn-orange">Оставить заявку</button>
-                                                <button id="tobasket" class="goods-item__tobasket">Добавить в корзину</button>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <picture class="goods-item__img">
-                                <source src="img/products/goods/product_3.webp" type="image/webp">
-                                <img src="img/products/goods/product_3.png" alt="Мука пшеничная">
+                    </a>
+                    <a href="#">
+                        <div class="another__card">
+                            <picture class="another__img">
+                                <source src="img/product/another/product_3.webp" type="image/webp">
+                                <img src="img/product/another/product_3.png" alt="Отруби пшеничные на кормовые цели">
                             </picture>
+                            <span class="another__name">Отруби пшеничные на кормовые цели</span>
                         </div>
-                        <button class="goods-item__forextra">читать ещё</button>
-                        <div class="goods-item__extra">
-                            <div class="goods-item-individual">
-                                <span class="goods-item-individual__title">Мука по индивидуальным параметрам</span>
-                                <div class="goods-item-individual__btns">
-                                    <button class="goods-item-individual__btn btn-orange">Оставить заявку</button>
-                                    <button id="tobasket-individ" class="goods-item__tobasket">Добавить в корзину</button>
-                                </div>
-                            </div>
-                            <div class="goods-item-individual__footer individual">
-                                <div class="individual__body">
-                                    <div class="individual-create">
-                                        <span class="individual__title">Произведем</span>
-                                        <span class="individual-create__subtitle">Произведем продукцию по вашим индивидуальным потребностям </span>
-                                    </div>
-                                    <div class="individual-pack">
-                                        <span class="individual__title">Упакуем</span>
-                                        <div class="individual-pack__info">
-                                            <div class="individual-pack__first">
-                                                <span>Пакет</span>
-                                                <span>2 кг</span>
-                                            </div>
-                                            <div class="individual-pack__second">
-                                                <span>Мешок</span>
-                                                <span>5,10,25,50 кг</span>
-                                            </div>
-                                            <div class="individual-pack__third">
-                                                <span>Авто</span>
-                                                <span>в таре, бестарно</span>
-                                            </div>
-                                            <div class="individual-pack__fourth">
-                                                <span>Вагон</span>
-                                                <span>в таре, бестарно</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="individual-delivery">
-                                        <span class="individual__title">Доставим в срок</span>
-                                        <div class="individual-delivery__info">
-                                            <span class="individual-delivery__first">Само&shy;вывоз</span>
-                                            <span class="individual-delivery__second">Авто</span>
-                                            <span class="individual-delivery__third">Муковоз</span>
-                                            <span class="individual-delivery__fourth">Вагон</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="goods-item bran" id="filterCard">
-                        <div class="goods-item__body">
-                            <div class="goods-item__text">
-                                <h3 class="goods-item__title title-h3-main">Пшеничные отруби</h3>
-                                <div class="goods-item__types">
-                                    <a href="#">
-                                        <div class="goods-item__type">
-                                            <span>На кормовые цели</span>
-                                            <div class="goods-item__btns">
-                                                <button class="goods-item__btn btn-orange">Оставить заявку</button>
-                                                <button id="tobasket" class="goods-item__tobasket">Добавить в корзину</button>
-                                            </div>
-                                        </div>
-                                        <div class="goods-item__type">
-                                            <span>На пищевые цели</span>
-                                            <div class="goods-item__btns">
-                                                <button class="goods-item__btn btn-orange">Оставить заявку</button>
-                                                <button id="tobasket" class="goods-item__tobasket">Добавить в корзину</button>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <picture class="goods-item__img">
-                                <source src="img/products/goods/product_4.webp" type="image/webp">
-                                <img src="img/products/goods/product_4.png" alt="Мука пшеничная">
-                            </picture>
-                        </div>
-                        <button class="goods-item__forextra">читать ещё</button>
-                        <div class="goods-item__extra">
-                            <div class="goods-item-individual">
-                                <span class="goods-item-individual__title">Мука по индивидуальным параметрам</span>
-                                <div class="goods-item-individual__btns">
-                                    <button class="goods-item-individual__btn btn-orange">Оставить заявку</button>
-                                    <button id="tobasket-individ" class="goods-item__tobasket">Добавить в корзину</button>
-                                </div>
-                            </div>
-                            <div class="goods-item-individual__footer individual">
-                                <div class="individual__body">
-                                    <div class="individual-create">
-                                        <span class="individual__title">Произведем</span>
-                                        <span class="individual-create__subtitle">Произведем продукцию по вашим индивидуальным потребностям </span>
-                                    </div>
-                                    <div class="individual-pack">
-                                        <span class="individual__title">Упакуем</span>
-                                        <div class="individual-pack__info">
-                                            <div class="individual-pack__first">
-                                                <span>Пакет</span>
-                                                <span>2 кг</span>
-                                            </div>
-                                            <div class="individual-pack__second">
-                                                <span>Мешок</span>
-                                                <span>5,10,25,50 кг</span>
-                                            </div>
-                                            <div class="individual-pack__third">
-                                                <span>Авто</span>
-                                                <span>в таре, бестарно</span>
-                                            </div>
-                                            <div class="individual-pack__fourth">
-                                                <span>Вагон</span>
-                                                <span>в таре, бестарно</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="individual-delivery">
-                                        <span class="individual__title">Доставим в срок</span>
-                                        <div class="individual-delivery__info">
-                                            <span class="individual-delivery__first">Само&shy;вывоз</span>
-                                            <span class="individual-delivery__second">Авто</span>
-                                            <span class="individual-delivery__third">Муковоз</span>
-                                            <span class="individual-delivery__fourth">Вагон</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="goods-item bran" id="filterCard">
-                        <div class="goods-item__body">
-                            <div class="goods-item__text">
-                                <h3 class="goods-item__title title-h3-main">Ржаные отруби</h3>
-                                <div class="goods-item__types">
-                                    <a href="#">
-                                        <div class="goods-item__type">
-                                            <span>На кормовые цели</span>
-                                            <div class="goods-item__btns">
-                                                <button class="goods-item__btn btn-orange">Оставить заявку</button>
-                                                <button id="tobasket" class="goods-item__tobasket">Добавить в корзину</button>
-                                            </div>
-                                        </div>
-                                        <div class="goods-item__type">
-                                            <span>На пищевые цели</span>
-                                            <div class="goods-item__btns">
-                                                <button class="goods-item__btn btn-orange">Оставить заявку</button>
-                                                <button id="tobasket" class="goods-item__tobasket">Добавить в корзину</button>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <picture class="goods-item__img">
-                                <source src="img/products/goods/product_4.webp" type="image/webp">
-                                <img src="img/products/goods/product_4.png" alt="Мука пшеничная">
-                            </picture>
-                        </div>
-                        <button class="goods-item__forextra">читать ещё</button>
-                        <div class="goods-item__extra">
-                            <div class="goods-item-individual">
-                                <span class="goods-item-individual__title">Мука по индивидуальным параметрам</span>
-                                <div class="goods-item-individual__btns">
-                                    <button class="goods-item-individual__btn btn-orange">Оставить заявку</button>
-                                    <button id="tobasket-individ" class="goods-item__tobasket">Добавить в корзину</button>
-                                </div>
-                            </div>
-                            <div class="goods-item-individual__footer individual">
-                                <div class="individual__body">
-                                    <div class="individual-create">
-                                        <span class="individual__title">Произведем</span>
-                                        <span class="individual-create__subtitle">Произведем продукцию по вашим индивидуальным потребностям </span>
-                                    </div>
-                                    <div class="individual-pack">
-                                        <span class="individual__title">Упакуем</span>
-                                        <div class="individual-pack__info">
-                                            <div class="individual-pack__first">
-                                                <span>Пакет</span>
-                                                <span>2 кг</span>
-                                            </div>
-                                            <div class="individual-pack__second">
-                                                <span>Мешок</span>
-                                                <span>5,10,25,50 кг</span>
-                                            </div>
-                                            <div class="individual-pack__third">
-                                                <span>Авто</span>
-                                                <span>в таре, бестарно</span>
-                                            </div>
-                                            <div class="individual-pack__fourth">
-                                                <span>Вагон</span>
-                                                <span>в таре, бестарно</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="individual-delivery">
-                                        <span class="individual__title">Доставим в срок</span>
-                                        <div class="individual-delivery__info">
-                                            <span class="individual-delivery__first">Само&shy;вывоз</span>
-                                            <span class="individual-delivery__second">Авто</span>
-                                            <span class="individual-delivery__third">Муковоз</span>
-                                            <span class="individual-delivery__fourth">Вагон</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="goods-item grain-waste" id="filterCard">
-                        <div class="goods-item__body">
-                            <div class="goods-item__text">
-                                <h3 class="goods-item__title title-h3-main">Ржаные отруби</h3>
-                                <div class="goods-item-individual__btns goods-item-individual__btns-end">
-                                    <button class="goods-item-individual__btn btn-orange">Оставить заявку</button>
-                                    <button id="tobasket-individ" class="goods-item__tobasket">Добавить в корзину</button>
-                                </div>
-                            </div>
-                            <picture class="goods-item__img">
-                                <source src="img/products/goods/product_4.webp" type="image/webp">
-                                <img src="img/products/goods/product_4.png" alt="Мука пшеничная">
-                            </picture>
-                        </div>
-                        <button class="goods-item__forextra">читать ещё</button>
-                        <div class="goods-item__extra">
-                            <div class="goods-item-individual">
-                                <span class="goods-item-individual__title">Мука по индивидуальным параметрам</span>
-                                <div class="goods-item-individual__btns">
-                                    <button class="goods-item-individual__btn btn-orange">Оставить заявку</button>
-                                    <button id="tobasket-individ" class="goods-item__tobasket">Добавить в корзину</button>
-                                </div>
-                            </div>
-                            <div class="goods-item-individual__footer individual">
-                                <div class="individual__body">
-                                    <div class="individual-create">
-                                        <span class="individual__title">Произведем</span>
-                                        <span class="individual-create__subtitle">Произведем продукцию по вашим индивидуальным потребностям </span>
-                                    </div>
-                                    <div class="individual-pack">
-                                        <span class="individual__title">Упакуем</span>
-                                        <div class="individual-pack__info">
-                                            <div class="individual-pack__first">
-                                                <span>Пакет</span>
-                                                <span>2 кг</span>
-                                            </div>
-                                            <div class="individual-pack__second">
-                                                <span>Мешок</span>
-                                                <span>5,10,25,50 кг</span>
-                                            </div>
-                                            <div class="individual-pack__third">
-                                                <span>Авто</span>
-                                                <span>в таре, бестарно</span>
-                                            </div>
-                                            <div class="individual-pack__fourth">
-                                                <span>Вагон</span>
-                                                <span>в таре, бестарно</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="individual-delivery">
-                                        <span class="individual__title">Доставим в срок</span>
-                                        <div class="individual-delivery__info">
-                                            <span class="individual-delivery__first">Само&shy;вывоз</span>
-                                            <span class="individual-delivery__second">Авто</span>
-                                            <span class="individual-delivery__third">Муковоз</span>
-                                            <span class="individual-delivery__fourth">Вагон</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
+                <button class="another__btn link-orange">Посмотреть всю продукцию</button>
             </div>
         </section>
+        <section class="stat product-round">
+            <picture class="stat__bg">
+                <source srcset="" type="image/webp">
+                <img src="img/product/another/round.png">
+            </picture>
+            <div class="stat__title product-round__title">
+                <h3 class="title-center title-h3-main">Произведем продукцию по вашим <span>индивидуальным потребностям</span> и доставим её в срок</h3>
+                <button class="product-round__btn btn-orange">Оставить заявку</button>
+            </div>
+
+        </section>
+
         <div class="popup tobasket">
             <div class="popup__body tobasket__body">
                 <button class="popup__close tobasket__close">
@@ -900,7 +657,7 @@
                     <button type="submit" class="tobasket__btn btn-orange">Добавить в корзину</button>
                 </div>
             </div>
-            <div class=" popup__overlay tobasket__overlay"></div>
+            <div class="popup__overlay tobasket__overlay"></div>
         </div>
     </main>
     
