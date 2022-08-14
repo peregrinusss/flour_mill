@@ -966,6 +966,7 @@
             </div>
         </section>
 
+
         <div class="popups">
             <div class="popup tobasket">
                 <div class="popup__body tobasket__body">
@@ -1009,13 +1010,13 @@
                     </div>
                     <form class="toorder-form">
                         <div class="toorder-form__header">
-                            <input required class="popup__input" type="text" placeholder="Имя">
-                            <input required class="popup__input" type="tel" placeholder="Телефон">
+                            <input required name="name" class="popup__input" id="popup-required" type="text" placeholder="Имя">
+                            <input required name="phone" class="popup__input" id="popup-required" type="tel" placeholder="Телефон">
                         </div>
-                        <input required class="popup__input" type="email" placeholder="Почта">
+                        <input required name="email" class="popup__input" id="popup-required" type="email" placeholder="Почта">
                         <textarea class="toorder-form__textarea" placeholder="Комментарий"></textarea>
                         <div class="toorder-form__checkbox">
-                            <input required type="checkbox" id="agree" class="toorder-form__checkbox-input">
+                            <input required name="checkbox" type="checkbox" id="agree" class="toorder-form__checkbox-input">
                             <label for="agree">Я согласен с условиями <br></label>
                             <a href="#"> политики конфиден&shy;циальноти</a>
                         </div>
