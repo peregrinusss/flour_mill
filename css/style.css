@@ -944,6 +944,7 @@ a:focus-visible {
   mask: var(--mask);
   margin-top: 50px;
   background: url("../img/introduce/background.png");
+  overflow: hidden;
 }
 
 .about-block {
@@ -3005,6 +3006,7 @@ a:focus-visible {
 
 .buy-body__btn {
   margin-top: 50px;
+  padding: 16px 24px;
 }
 
 /* ------------------------------/BUY/------------------------ */
@@ -4562,6 +4564,7 @@ a:focus-visible {
 
 .documentation__title {
   margin-bottom: 50px;
+  max-width: 1100px;
 }
 
 .table-wrap {
@@ -4807,6 +4810,58 @@ a:focus-visible {
   display: grid;
 }
 
+.gallery__item {
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.gallery__item:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.2s;
+}
+
+.gallery__item:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.2s;
+}
+
+.gallery__item::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background: url("../img/icons/magnifier.svg") no-repeat;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+
+.gallery__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+
 .gallery__item a {
   display: block;
   width: 100%;
@@ -4823,12 +4878,18 @@ a:focus-visible {
      object-fit: cover;
 }
 
+.gallery__image:hover img {
+  height: 105%;
+  transition: 0.3s;
+}
+
 .gallery__image img {
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   height: 100%;
-  border-radius: 10px;
-  overflow: hidden;
+  transition: 0.3s;
 }
 
 .gallery__btn {
@@ -6910,8 +6971,8 @@ a:focus-visible {
   width: 100%;
   position: absolute;
   top: 0;
-  background: linear-gradient(90deg, #664B42 50%, transparent 0);
-  background-size: 20px 1px;
+  background: linear-gradient(90deg, #A28276 50%, transparent 0);
+  background-size: 15px 1px;
 }
 
 .recipe-card__footer span {
@@ -7049,6 +7110,13 @@ a:focus-visible {
 
 .headline__content {
   margin-top: 50px;
+}
+
+.headline__text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  color: #1C1616;
 }
 
 .headline__text p:not(:last-child) {
@@ -7682,6 +7750,11 @@ a:focus-visible {
   transition: 0.2s;
 }
 
+.cart-item:hover .cart-item__delete {
+  opacity: 1;
+  visibility: visible;
+}
+
 .cart-item__text {
   margin-right: 16px;
 }
@@ -7768,6 +7841,9 @@ a:focus-visible {
   top: 0;
   bottom: 0;
   margin: auto 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
 }
 
 .cart-item__delete svg {
@@ -9250,7 +9326,6 @@ a:focus-visible {
 
   .hat-phone {
     margin-right: 30%;
-    font-size: 14px;
   }
 
   .search__logo {
@@ -9453,10 +9528,15 @@ a:focus-visible {
     text-align: center;
     background-position: top;
     margin-top: 50px;
+    max-width: 406px;
   }
 
   .item:not(:last-child) {
     margin-right: 0;
+  }
+
+  .item__subtitle {
+    max-width: 100%;
   }
 
   .prod-card__content {
@@ -9483,7 +9563,7 @@ a:focus-visible {
   }
 
   .truck__image {
-    width: 900px;
+    width: 773px;
   }
 
   .variants {
@@ -9492,6 +9572,14 @@ a:focus-visible {
 
   .map {
     background: url(../img/path/supply/frame_medium.svg) no-repeat center;
+  }
+
+  .form__checkbox {
+    align-self: center;
+  }
+
+  .form__btn {
+    align-self: center;
   }
 
   .our-company-card__title {
@@ -9643,8 +9731,16 @@ a:focus-visible {
     max-width: 270px;
   }
 
+  .documentation__title {
+    max-width: 800px;
+  }
+
   .docs__card {
     padding: 70px 40px;
+  }
+
+  .docs__title {
+    max-width: 750px;
   }
 
   .table-wrap table td {
@@ -10010,6 +10106,7 @@ a:focus-visible {
 
   .work__body {
     margin-right: 0;
+    max-width: 100%;
   }
 
   .work-no__subtitle {
@@ -10026,6 +10123,12 @@ a:focus-visible {
 
   .work-no__checkbox a {
     padding-left: 0;
+    display: inline;
+  }
+
+  .work-yes__hat {
+    flex-direction: row;
+    align-items: end;
   }
 
   .work-aside {
@@ -10052,11 +10155,15 @@ a:focus-visible {
   }
 
   .consumer-header__img img {
-    width: 600px;
+    width: 700px;
   }
 
   .consumer-header__text {
     max-width: 100%;
+  }
+
+  .features__body {
+    max-width: 750px;
   }
 
   .recipes__cards {
@@ -10376,6 +10483,10 @@ a:focus-visible {
     margin-left: 30px;
   }
 
+  .consumer-header__img img {
+    width: 600px;
+  }
+
   .phones__tel {
     font-size: 24px;
   }
@@ -10419,6 +10530,10 @@ a:focus-visible {
   .toorder-form__checkbox a {
     display: block;
     padding-left: 48px;
+  }
+
+  .hat-phone {
+    font-size: 15px;
   }
 
   .search-body__card {
@@ -11352,6 +11467,10 @@ a:focus-visible {
     height: 380px;
   }
 
+  .types {
+    padding-top: 200px;
+  }
+
   .clean-header__image {
     height: auto;
     width: 360px;
@@ -11361,9 +11480,15 @@ a:focus-visible {
     width: 280px;
   }
 
+  .clean__items {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .item {
     background-size: 90px;
     padding-top: 106px;
+    max-width: 270px;
   }
 
   .item__title {
@@ -11516,10 +11641,12 @@ a:focus-visible {
   .form__btn {
     max-width: 100%;
     margin-top: 40px;
+    align-self: start;
   }
 
   .form__checkbox {
     margin-top: 24px;
+    align-self: start;
   }
 
   .footer__logo {
@@ -12521,6 +12648,15 @@ a:focus-visible {
     margin-top: 16px;
   }
 
+  .work-yes__hat {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .work-yes__text {
+    margin-right: 0;
+  }
+
   .work-no__subtitle {
     font-size: 16px;
     line-height: 130%;
@@ -12731,6 +12867,12 @@ a:focus-visible {
 
   .headline__content {
     margin-top: 30px;
+  }
+
+  .headline__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
   }
 
   .headline__text p:not(:last-child) {
@@ -13523,6 +13665,10 @@ a:focus-visible {
     line-height: 120%;
   }
 
+  .form__btn {
+    width: 100%;
+  }
+
   .footer-details__phone {
     font-size: 5.6vw;
   }
@@ -13724,6 +13870,10 @@ a:focus-visible {
 
   .position__email a {
     font-size: 9vw;
+  }
+
+  .headline__text {
+    font-size: 14px;
   }
 
   .archive__container {
