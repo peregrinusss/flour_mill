@@ -2705,6 +2705,7 @@ a:focus-visible {
   display: flex;
   position: relative;
   z-index: 5;
+  background: none;
 }
 
 .intro-slider-dots__border {
