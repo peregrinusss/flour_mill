@@ -2704,7 +2704,7 @@ a:focus-visible {
 .intro-slider-dots {
   display: grid;
   grid-template-columns: 30px 30px 30px;
-  position: relative;
+  position: absolute;
   z-index: 5;
 }
 
