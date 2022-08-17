@@ -2732,7 +2732,7 @@ a:focus-visible {
 }
 
 .intro-slider-dots__border.active .intro-slider__dot {
-  background: #FD9F32;
+  background-color: #FD9F32;
 }
 
 .intro-slider__dot {
@@ -2740,14 +2740,6 @@ a:focus-visible {
   width: 0.6em;
   height: 0.6em;
   border-radius: 50%;
-}
-
-.intro-slider__dot.active {
-  background-color: #FD9F32;
-}
-
-.intro-slider__dot.active .intro-slider-dots__border {
-  border: 1px solid #F4A344;
 }
 
 .intro-slider__title {
