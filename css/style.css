@@ -6986,6 +6986,14 @@ a:focus-visible {
 
 /* -----------------/RECIPES----------------- */
 
+.consumer-contact__text {
+  max-width: 386px;
+}
+
+.consumer-contact__subtitle {
+  max-width: 317px;
+}
+
 /* -----------------------/CONSUMERS--------------------- */
 
 /* ------------------------NEWS--------------------- */
@@ -9201,6 +9209,10 @@ a:focus-visible {
 
   .recipe-card__preview {
     max-width: 550px;
+  }
+
+  .consumer-contact__header {
+    max-width: 386px;
   }
 
   .news__cards {
@@ -13057,6 +13069,11 @@ a:focus-visible {
   .cart-item__weight {
     font-weight: 700;
     font-size: 18px;
+  }
+
+  .cart-item__delete {
+    opacity: 1;
+    visibility: visible;
   }
 
   .cart-yours__title {
