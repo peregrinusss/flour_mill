@@ -2702,15 +2702,14 @@ a:focus-visible {
 }
 
 .intro-slider-dots {
-  display: grid;
-  grid-template-columns: 30px 30px 30px;
-  position: absolute;
+  display: flex;
+  position: relative;
   z-index: 5;
 }
 
 .intro-slider-dots__border {
-  width: 30px;
-  height: 30px;
+  width: 1.9em;
+  height: 1.9em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2737,14 +2736,14 @@ a:focus-visible {
 }
 
 .intro-slider__dot {
-  background: #B69D86;
-  width: 10px;
-  height: 10px;
+  background-color: #B69D86;
+  width: 0.6em;
+  height: 0.6em;
   border-radius: 50%;
 }
 
 .intro-slider__dot.active {
-  background: #FD9F32;
+  background-color: #FD9F32;
 }
 
 .intro-slider__dot.active .intro-slider-dots__border {
