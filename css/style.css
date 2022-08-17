@@ -1722,6 +1722,10 @@ a:focus-visible {
   color: #ffffff;
 }
 
+.invalid {
+  box-shadow: 0px 0px 0px 2px red;
+}
+
 /* ------------------------HEADER----------------------- */
 
 .header {
@@ -2701,6 +2705,7 @@ a:focus-visible {
   display: grid;
   grid-template-columns: 30px 30px 30px;
   position: relative;
+  z-index: 5;
 }
 
 .intro-slider-dots__border {
