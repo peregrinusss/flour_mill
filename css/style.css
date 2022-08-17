@@ -966,8 +966,8 @@ a:focus-visible {
   position: absolute;
   top: 0;
   width: 100%;
-  background: linear-gradient(90deg, #664B42 50%, transparent 0);
-  background-size: 20px 1px;
+  background: linear-gradient(90deg, #A28276 50%, transparent 0);
+  background-size: 15px 1px;
 }
 
 .contacts__container {
@@ -2698,7 +2698,9 @@ a:focus-visible {
 }
 
 .intro-slider-dots {
-  display: flex;
+  display: grid;
+  grid-template-columns: 30px 30px 30px;
+  position: relative;
 }
 
 .intro-slider-dots__border {
@@ -7059,8 +7061,8 @@ a:focus-visible {
   width: 100%;
   position: absolute;
   top: 0;
-  background: linear-gradient(90deg, #664B42 50%, transparent 0);
-  background-size: 20px 1px;
+  background: linear-gradient(90deg, #A28276 50%, transparent 0);
+  background-size: 15px 1px;
 }
 
 .news__date {
@@ -7429,8 +7431,8 @@ a:focus-visible {
   width: 100%;
   position: absolute;
   top: 0;
-  background: linear-gradient(90deg, #664B42 50%, transparent 0);
-  background-size: 20px 1px;
+  background: linear-gradient(90deg, #A28276 50%, transparent 0);
+  background-size: 15px 1px;
 }
 
 .archive-card {
@@ -8114,8 +8116,8 @@ a:focus-visible {
   position: absolute;
   top: 0;
   width: 100%;
-  background: linear-gradient(90deg, #664B42 50%, transparent 0);
-  background-size: 20px 1px;
+  background: linear-gradient(90deg, #A28276 50%, transparent 0);
+  background-size: 15px 1px;
 }
 
 .phones__tel {
@@ -11063,7 +11065,7 @@ a:focus-visible {
   }
 
   .about-head__card {
-    height: 641px;
+    height: 40em;
   }
 
   .contacts__container {
@@ -12189,7 +12191,7 @@ a:focus-visible {
 
   .gallery__block {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     -moz-column-gap: 24px;
          column-gap: 24px;
     row-gap: 16px;
@@ -12205,7 +12207,7 @@ a:focus-visible {
 
   .gallery__item-big {
     grid-column: span 2;
-    grid-row: 3;
+    grid-row: 3/span 2;
   }
 
   .products-head {
