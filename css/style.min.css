@@ -4792,6 +4792,7 @@ a:focus-visible {
 .gallery__block {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 244px);
   -moz-column-gap: 70px;
        column-gap: 70px;
   row-gap: 32px;
@@ -8595,6 +8596,10 @@ a:focus-visible {
     padding: 70px 10%;
   }
 
+  .gallery__block {
+    grid-template-rows: repeat(2, 16.2vw);
+  }
+
   .product-card {
     padding: 66px 90px 180px;
   }
@@ -12065,6 +12070,14 @@ a:focus-visible {
 
   .progress-road__items::before {
     display: none;
+  }
+
+  .progress-road__items-reverse > :first-child {
+    order: 2;
+  }
+
+  .progress-road__items-reverse > :last-child {
+    order: 1;
   }
 
   .progress-road__item {
