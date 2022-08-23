@@ -4816,6 +4816,21 @@ a:focus-visible {
   position: relative;
 }
 
+.gallery__item-nophoto {
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.gallery__item-nophoto a {
+  cursor: default;
+}
+
+.gallery__item:hover .gallery__image img {
+  height: 105%;
+  transition: 0.3s;
+}
+
 .gallery__item:hover::before {
   opacity: 1;
   visibility: visible;
@@ -4876,11 +4891,6 @@ a:focus-visible {
 .gallery__image {
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.gallery__image:hover img {
-  height: 105%;
-  transition: 0.3s;
 }
 
 .gallery__image img {
