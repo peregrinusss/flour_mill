@@ -980,6 +980,7 @@ a:focus-visible {
   display: flex;
   flex-direction: column;
   max-width: 280px;
+  white-space: nowrap;
 }
 
 .contacts-item:not(:last-child) {
@@ -7632,6 +7633,7 @@ a:focus-visible {
   font-size: 26px;
   line-height: 110%;
   color: #664B42;
+  white-space: nowrap;
 }
 
 .page404__tel a {
@@ -7662,6 +7664,7 @@ a:focus-visible {
   font-size: 26px;
   line-height: 110%;
   color: #664B42;
+  white-space: nowrap;
 }
 
 .page404__email a {
@@ -8124,6 +8127,7 @@ a:focus-visible {
   margin-top: 10px;
   padding-top: 30px;
   max-width: 240px;
+  white-space: nowrap;
 }
 
 .phones__footer::before {
@@ -8287,6 +8291,7 @@ a:focus-visible {
   max-width: 245px;
   height: 60px;
   margin-top: 50px;
+  white-space: nowrap;
 }
 
 .footer-details__phone {
