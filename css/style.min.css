@@ -7706,7 +7706,7 @@ a:focus-visible {
 .cart__body {
   margin-top: 70px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 705px 1fr;
   gap: 70px;
 }
 
@@ -7762,6 +7762,7 @@ a:focus-visible {
   padding: 8px 65px 8px 15px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: relative;
   border-radius: 8px;
   transition: 0.2s;
@@ -7777,8 +7778,9 @@ a:focus-visible {
   visibility: visible;
 }
 
-.cart-item__text {
-  margin-right: 16px;
+.cart-item__left {
+  display: flex;
+  align-items: center;
 }
 
 .cart-item__title {
@@ -7787,7 +7789,43 @@ a:focus-visible {
   line-height: 120%;
   color: #1C1616;
   margin: 0;
-  margin-bottom: 8px;
+  display: block;
+  width: 100%;
+  max-width: 282px;
+}
+
+.cart-item__input {
+  background: #F7F7F7;
+  border-radius: 4px;
+  border: none;
+  height: 58px;
+  display: block;
+  width: 100%;
+  max-width: 213px;
+  padding: 0 40px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 120%;
+  color: #1C1616;
+  margin-left: 24px;
+  margin-right: 24px;
+  flex: 1 1 auto;
+}
+
+.cart-item__input::-moz-placeholder {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 120%;
+  color: #A28276;
+  opacity: 0.5;
+}
+
+.cart-item__input::placeholder {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 120%;
+  color: #A28276;
+  opacity: 0.5;
 }
 
 .cart-item__footer {
@@ -13094,6 +13132,10 @@ a:focus-visible {
     font-size: 18px;
   }
 
+  .cart-item__left {
+    width: 100%;
+  }
+
   .cart-item__weight {
     font-weight: 700;
     font-size: 18px;
@@ -13429,11 +13471,12 @@ a:focus-visible {
 
   .cart-item {
     justify-content: start;
-    padding: 16px 40px 16px 8px;
+    padding: 16px 55px 16px 8px;
   }
 
   .cart-item__title {
     margin-bottom: 4px;
+    max-width: 100%;
   }
 
   .cart-item__img {
@@ -13445,14 +13488,16 @@ a:focus-visible {
     width: 16vw;
   }
 
-  .cart-item__text {
+  .cart-item__left {
+    flex-direction: column;
+    align-items: flex-start;
     order: 2;
-    margin-left: 8px;
+    margin-left: 10px;
   }
 
-  .cart-item__footer {
-    flex-direction: column;
-    align-items: start;
+  .cart-item__input {
+    margin: 0;
+    margin-top: 8px;
   }
 
   .cart-item__weight {
