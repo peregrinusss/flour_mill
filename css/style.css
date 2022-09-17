@@ -5093,6 +5093,10 @@ a:focus-visible {
   width: 100%;
 }
 
+.goods-item__types a:hover {
+  color: #FD9F32;
+}
+
 .goods-item__type {
   display: flex;
   align-items: center;
