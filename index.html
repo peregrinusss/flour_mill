@@ -13,91 +13,200 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@500;600;700;800&display=swap&_v=20221206001142" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css?_v=20221206001142">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>Обзорная страница</title>    
 </head>
     <style>
-        li {
-            list-style: inherit;
-            font-size: 20px;
-        }
-        .index {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 15px;
-        }
-        a:hover {
-            color: crimson;
-            transition: 0.2s;
-        }
-        a {
-            transition: 0.2s;
-        }
+  @keyframes gradient {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+
+  html, body {
+    height: 100%;
+    color: #fff;
+    background: -o-linear-gradient(310deg, #000000, #04523c);
+    background: linear-gradient(140deg, #0c0c0c, #03515a);
+    background-repeat: no-repeat;
+    background-size: 200%;
+    animation: gradient 10s infinite;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+  html {
+    height: 200% !important;
+  }
+
+  li {
+    list-style: none;
+    list-style-type: decimal;
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  .index {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 15px;
+  }
+  h1 {
+    width: fit-content;
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 130%;
+    background-image: linear-gradient(to right, #5cc889, #2b8bbb);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  a {
+    background-image: linear-gradient(
+      to right,
+      #1dd994,
+      #1dd994 50%,
+      #ffffff 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+
+  a::before{
+    content: '';
+    background: #1dd994;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.3s ease-in-out;
+  }
+  a::after{
+    content: '';
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  a:hover {
+    background-position: 0;
+  }
+
+  a:hover::before{
+    width: 100%;
+  }
+  a:hover::after{
+    width: 0;
+  }
+
+  .disc {
+    display: block;
+    font-size: 16px;
+    margin: 40px 0 50px;
+  }
+
+  .stack {
+    display: flex;
+    column-gap: 20px;
+    row-gap: 5px;
+    flex-wrap: wrap;
+  }
+  .stack span {
+    font-size: 22px;
+    font-weight: 600;
+    color: #817f7f;
+  }
     </style>
 <body>
     <div class="index">
-        <h1>Адаптивная верстка "Володарский мукомольный комбинат"</h1>
+        <div class="stack">
+            <span>Html</span>
+            <span>Scss</span>
+            <span>Js (ES6)</span>
+            <span>Js libraries</span>
+            <span>Gulp</span>
+            <span>Bem</span>
+          </div>
+        <h1>Разработка верстки интернет-магазина "Володарский мукомольный комбинат"</h1>
+        <span class="disc">Ниже приведены ссылки на страницы проекта. Для вашего удобства страницы открываются в новом окне.</span>
         <ol>
             <li>
-                <a href="main-page.html">Главная</a>
+                <a href="main-page.html" target="_blank">Главная</a>
             </li>
             <li>
-                <a href="our-company.html">О компании: наша компания</a>
+                <a href="our-company.html" target="_blank">О компании: наша компания</a>
             </li>
             <li>
-                <a href="history.html">О компании: история</a>
+                <a href="history.html" target="_blank">О компании: история</a>
             </li>
             <li>
-                <a href="awards.html">О компании: доки и награды</a>
+                <a href="awards.html" target="_blank">О компании: доки и награды</a>
             </li>
             <li>
-                <a href="photos.html">О компании: фото-видео</a>
+                <a href="photos.html" target="_blank">О компании: фото-видео</a>
             </li>
             <li>
-                <a href="products.html">Продукция</a>
+                <a href="products.html" target="_blank">Продукция</a>
             </li>
             <li>
-                <a href="product.html">Товар</a>
+                <a href="product.html" target="_blank">Товар</a>
             </li>
             <li>
-                <a href="toorder-error.html">Ошибка заказа поставки (попап)</a>
+                <a href="toorder-error.html" target="_blank">Ошибка заказа поставки (попап)</a>
             </li>
             <li>
-                <a href="services.html">Услуги</a>
+                <a href="services.html" target="_blank">Услуги</a>
             </li>
             <li>
-                <a href="questions.html">Вопрос-ответ</a>
+                <a href="questions.html" target="_blank">Вопрос-ответ</a>
             </li>
             <li>
-                <a href="clients-no.html">Клиентам: вакансий нет</a>
+                <a href="clients-no.html" target="_blank">Клиентам: вакансий нет</a>
             </li>
             <li>
-                <a href="clients-yes.html">Клиентам: вакансии есть</a>
+                <a href="clients-yes.html" target="_blank">Клиентам: вакансии есть</a>
             </li>
             <li>
-                <a href="consumers.html">Клиентам: потребителям</a>
+                <a href="consumers.html" target="_blank">Клиентам: потребителям</a>
             </li>
             <li>
-                <a href="contacts.html">Контакты</a>
+                <a href="contacts.html" target="_blank">Контакты</a>
             </li>
             <li>
-                <a href="news.html">Новости</a>
+                <a href="news.html" target="_blank">Новости</a>
             </li>
             <li>
-                <a href="headline.html">Открытая новость</a>
+                <a href="headline.html" target="_blank">Открытая новость</a>
             </li>
             <li>
-                <a href="archive.html">Архив новостей</a>
+                <a href="archive.html" target="_blank">Архив новостей</a>
             </li>
             <li>
-                <a href="404.html">404</a>
+                <a href="404.html" target="_blank">404</a>
             </li>
             <li>
-                <a href="cart.html">Корзина</a>
+                <a href="cart.html" target="_blank">Корзина</a>
             </li>
             <li>
-                <a href="phones.html">Страница с телефонами</a>
+                <a href="phones.html" target="_blank">Страница с телефонами</a>
             </li>
         </ol>
     </div>
